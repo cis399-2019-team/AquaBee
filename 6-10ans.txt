@@ -1,7 +1,99 @@
 Script started on 2019-07-04 20:45:15+0000
-
+Updated on 2019-07-10
 
 This script answers questions 6 through 10 of Assignment 1 for CIS399 System Administration
+
+*ADDING 5*
+ANSWER 5...
+ubuntu@ip-10-0-3-247:~$ ps -ax
+  PID TTY      STAT   TIME COMMAND
+    1 ?        Ss     0:08 /lib/systemd/systemd --system --deserialize 35
+    2 ?        S      0:00 [kthreadd]
+    4 ?        I<     0:00 [kworker/0:0H]
+    6 ?        I<     0:00 [mm_percpu_wq]
+    7 ?        S      0:00 [ksoftirqd/0]
+    8 ?        I      0:00 [rcu_sched]
+    9 ?        I      0:00 [rcu_bh]
+   10 ?        S      0:00 [migration/0]
+   11 ?        S      0:01 [watchdog/0]
+   12 ?        S      0:00 [cpuhp/0]
+   13 ?        S      0:00 [kdevtmpfs]
+   14 ?        I<     0:00 [netns]
+   15 ?        S      0:00 [rcu_tasks_kthre]
+   16 ?        S      0:00 [kauditd]
+   17 ?        S      0:00 [xenbus]
+   18 ?        S      0:00 [xenwatch]
+   20 ?        S      0:00 [khungtaskd]
+   21 ?        S      0:00 [oom_reaper]
+   22 ?        I<     0:00 [writeback]
+   23 ?        S      0:00 [kcompactd0]
+   24 ?        SN     0:00 [ksmd]
+   25 ?        I<     0:00 [crypto]
+   26 ?        I<     0:00 [kintegrityd]
+   27 ?        I<     0:00 [kblockd]
+   28 ?        I<     0:00 [ata_sff]
+   29 ?        I<     0:00 [md]
+   30 ?        I<     0:00 [edac-poller]
+   31 ?        I<     0:00 [devfreq_wq]
+   32 ?        I<     0:00 [watchdogd]
+   35 ?        S      0:01 [kswapd0]
+   36 ?        I<     0:00 [kworker/u31:0]
+   37 ?        S      0:00 [ecryptfs-kthrea]
+   79 ?        I<     0:00 [kthrotld]
+   80 ?        I<     0:00 [nvme-wq]
+   81 ?        S      0:00 [scsi_eh_0]
+   82 ?        I<     0:00 [scsi_tmf_0]
+   83 ?        S      0:00 [scsi_eh_1]
+   84 ?        I<     0:00 [scsi_tmf_1]
+   89 ?        I<     0:00 [ipv6_addrconf]
+   99 ?        I<     0:00 [kstrp]
+  165 ?        I<     0:00 [kworker/0:1H]
+  270 ?        I<     0:00 [raid5wq]
+  322 ?        S      0:00 [jbd2/xvda1-8]
+  323 ?        I<     0:00 [ext4-rsv-conver]
+  398 ?        I<     0:00 [iscsi_eh]
+  399 ?        I<     0:00 [ib-comp-wq]
+  400 ?        I<     0:00 [ib_mcast]
+  401 ?        I<     0:00 [ib_nl_sa_wq]
+  402 ?        I<     0:00 [rdma_cm]
+  408 ?        Ss     0:00 /sbin/lvmetad -f
+  432 ?        S<     0:00 [loop0]
+  434 ?        S<     0:00 [loop1]
+  436 ?        S<     0:00 [loop2]
+  439 ?        S<     0:00 [loop3]
+  741 ?        Ssl    0:01 /snap/amazon-ssm-agent/1335/amazon-ssm-agent
+  750 ?        Ss     0:00 /lib/systemd/systemd-logind
+  752 ?        Ss     0:01 /usr/bin/dbus-daemon --system --address=systemd: --no
+  769 ?        Ss     0:00 /usr/sbin/atd -f
+  780 ?        Ss     0:00 /usr/sbin/cron -f
+  783 ?        Ssl    0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-s
+  784 ?        Ssl    0:01 /usr/bin/lxcfs /var/lib/lxcfs/
+  785 ?        Ssl    0:06 /usr/lib/accountsservice/accounts-daemon
+  788 ?        Ssl    0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unatt
+  797 ttyS0    Ss+    0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,38400,960
+  801 tty1     Ss+    0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+  812 ?        Ssl    0:00 /usr/lib/policykit-1/polkitd --no-debug
+ 2934 ?        Ss     0:00 /lib/systemd/systemd-networkd
+ 2960 ?        Ss     0:00 /lib/systemd/systemd-resolved
+ 2977 ?        Ssl    0:00 /lib/systemd/systemd-timesyncd
+ 3002 ?        S<s    0:01 /lib/systemd/systemd-journald
+ 5962 ?        Ss     0:00 /lib/systemd/systemd-udevd
+ 6211 ?        Ss     0:00 /usr/sbin/sshd -D
+10124 ?        Ssl    0:00 /usr/sbin/rsyslogd -n
+11169 ?        I<     0:00 [xfsalloc]
+11170 ?        I<     0:00 [xfs_mru_cache]
+11520 ?        Ssl    0:11 /usr/lib/snapd/snapd
+17486 ?        I      0:00 [kworker/0:1]
+24144 ?        I      0:00 [kworker/0:0]
+24782 ?        I      0:00 [kworker/u30:1]
+24901 ?        I      0:00 [kworker/u30:2]
+24906 ?        Ss     0:00 sshd: ubuntu [priv]
+24908 ?        Ss     0:00 /lib/systemd/systemd --user
+24909 ?        S      0:00 (sd-pam)
+24993 ?        I      0:00 [kworker/0:2]
+25033 ?        S      0:00 sshd: ubuntu@pts/0
+25034 pts/0    Ss     0:00 -bash
+25051 pts/0    R+     0:00 ps -ax
 
 
 ANSWER 6...
