@@ -1,0 +1,14 @@
+This termial excerpt answers questions 1 and 2 of Assignment 2 for CIS399 System Administration.
+
+1. Result of uninstalling the sshd package (command - "sudo apt remove openssh-server"):
+   Notice: Compiled catalog for ip-10-0-3-212.us-west-2.compute.internal in environment production in 0.42 seconds
+   Info: Applying configuration version '1563226412'
+   Notice: /Stage[main]/Sshd/Package[openssh-server]/ensure: created
+   Notice: Applied catalog in 6.31 seconds 
+
+2. Result of stopping sshd (command - "sudo service sshd stop"):
+   Notice: Compiled catalog for ip-10-0-3-212.us-west-2.compute.internal in environment production in 0.38 seconds
+   Info: Applying configuration version '1563226077'
+   Notice: /Stage[main]/Sshd/Service[ssh]/ensure: ensure changed 'stopped' to 'running'
+   Info: /Stage[main]/Sshd/Service[ssh]: Unscheduling refresh on Service[ssh]
+   Notice: Applied catalog in 0.34 seconds
