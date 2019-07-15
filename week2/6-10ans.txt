@@ -1,0 +1,2373 @@
+Script started on 2019-07-04 20:45:15+0000
+Updated on 2019-07-10
+
+This script answers questions 6 through 10 of Assignment 1 for CIS399 System Administration
+
+*ADDING 5*
+ANSWER 5...
+ubuntu@ip-10-0-3-247:~$ ps -ax
+  PID TTY      STAT   TIME COMMAND
+    1 ?        Ss     0:08 /lib/systemd/systemd --system --deserialize 35
+    2 ?        S      0:00 [kthreadd]
+    4 ?        I<     0:00 [kworker/0:0H]
+    6 ?        I<     0:00 [mm_percpu_wq]
+    7 ?        S      0:00 [ksoftirqd/0]
+    8 ?        I      0:00 [rcu_sched]
+    9 ?        I      0:00 [rcu_bh]
+   10 ?        S      0:00 [migration/0]
+   11 ?        S      0:01 [watchdog/0]
+   12 ?        S      0:00 [cpuhp/0]
+   13 ?        S      0:00 [kdevtmpfs]
+   14 ?        I<     0:00 [netns]
+   15 ?        S      0:00 [rcu_tasks_kthre]
+   16 ?        S      0:00 [kauditd]
+   17 ?        S      0:00 [xenbus]
+   18 ?        S      0:00 [xenwatch]
+   20 ?        S      0:00 [khungtaskd]
+   21 ?        S      0:00 [oom_reaper]
+   22 ?        I<     0:00 [writeback]
+   23 ?        S      0:00 [kcompactd0]
+   24 ?        SN     0:00 [ksmd]
+   25 ?        I<     0:00 [crypto]
+   26 ?        I<     0:00 [kintegrityd]
+   27 ?        I<     0:00 [kblockd]
+   28 ?        I<     0:00 [ata_sff]
+   29 ?        I<     0:00 [md]
+   30 ?        I<     0:00 [edac-poller]
+   31 ?        I<     0:00 [devfreq_wq]
+   32 ?        I<     0:00 [watchdogd]
+   35 ?        S      0:01 [kswapd0]
+   36 ?        I<     0:00 [kworker/u31:0]
+   37 ?        S      0:00 [ecryptfs-kthrea]
+   79 ?        I<     0:00 [kthrotld]
+   80 ?        I<     0:00 [nvme-wq]
+   81 ?        S      0:00 [scsi_eh_0]
+   82 ?        I<     0:00 [scsi_tmf_0]
+   83 ?        S      0:00 [scsi_eh_1]
+   84 ?        I<     0:00 [scsi_tmf_1]
+   89 ?        I<     0:00 [ipv6_addrconf]
+   99 ?        I<     0:00 [kstrp]
+  165 ?        I<     0:00 [kworker/0:1H]
+  270 ?        I<     0:00 [raid5wq]
+  322 ?        S      0:00 [jbd2/xvda1-8]
+  323 ?        I<     0:00 [ext4-rsv-conver]
+  398 ?        I<     0:00 [iscsi_eh]
+  399 ?        I<     0:00 [ib-comp-wq]
+  400 ?        I<     0:00 [ib_mcast]
+  401 ?        I<     0:00 [ib_nl_sa_wq]
+  402 ?        I<     0:00 [rdma_cm]
+  408 ?        Ss     0:00 /sbin/lvmetad -f
+  432 ?        S<     0:00 [loop0]
+  434 ?        S<     0:00 [loop1]
+  436 ?        S<     0:00 [loop2]
+  439 ?        S<     0:00 [loop3]
+  741 ?        Ssl    0:01 /snap/amazon-ssm-agent/1335/amazon-ssm-agent
+  750 ?        Ss     0:00 /lib/systemd/systemd-logind
+  752 ?        Ss     0:01 /usr/bin/dbus-daemon --system --address=systemd: --no
+  769 ?        Ss     0:00 /usr/sbin/atd -f
+  780 ?        Ss     0:00 /usr/sbin/cron -f
+  783 ?        Ssl    0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-s
+  784 ?        Ssl    0:01 /usr/bin/lxcfs /var/lib/lxcfs/
+  785 ?        Ssl    0:06 /usr/lib/accountsservice/accounts-daemon
+  788 ?        Ssl    0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unatt
+  797 ttyS0    Ss+    0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,38400,960
+  801 tty1     Ss+    0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+  812 ?        Ssl    0:00 /usr/lib/policykit-1/polkitd --no-debug
+ 2934 ?        Ss     0:00 /lib/systemd/systemd-networkd
+ 2960 ?        Ss     0:00 /lib/systemd/systemd-resolved
+ 2977 ?        Ssl    0:00 /lib/systemd/systemd-timesyncd
+ 3002 ?        S<s    0:01 /lib/systemd/systemd-journald
+ 5962 ?        Ss     0:00 /lib/systemd/systemd-udevd
+ 6211 ?        Ss     0:00 /usr/sbin/sshd -D
+10124 ?        Ssl    0:00 /usr/sbin/rsyslogd -n
+11169 ?        I<     0:00 [xfsalloc]
+11170 ?        I<     0:00 [xfs_mru_cache]
+11520 ?        Ssl    0:11 /usr/lib/snapd/snapd
+17486 ?        I      0:00 [kworker/0:1]
+24144 ?        I      0:00 [kworker/0:0]
+24782 ?        I      0:00 [kworker/u30:1]
+24901 ?        I      0:00 [kworker/u30:2]
+24906 ?        Ss     0:00 sshd: ubuntu [priv]
+24908 ?        Ss     0:00 /lib/systemd/systemd --user
+24909 ?        S      0:00 (sd-pam)
+24993 ?        I      0:00 [kworker/0:2]
+25033 ?        S      0:00 sshd: ubuntu@pts/0
+25034 pts/0    Ss     0:00 -bash
+25051 pts/0    R+     0:00 ps -ax
+
+
+ANSWER 6...
+
+]0;ubuntu@ip-10-0-3-247: ~[01;32mubuntu@ip-10-0-3-247[00m:[01;34m~[00m$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc fq_codel state UP group default qlen 1000
+    link/ether 0a:06:53:8e:cf:ca brd ff:ff:ff:ff:ff:ff
+    inet 10.0.3.247/24 brd 10.0.3.255 scope global dynamic eth0
+       valid_lft 2128sec preferred_lft 2128sec
+    inet6 fe80::806:53ff:fe8e:cfca/64 scope link 
+       valid_lft forever preferred_lft forever
+
+
+ANSWER 7...
+
+]0;ubuntu@ip-10-0-3-247: ~[01;32mubuntu@ip-10-0-3-247[00m:[01;34m~[00m$ netstat -rn
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         10.0.3.1        0.0.0.0         UG        0 0          0 eth0
+10.0.3.0        0.0.0.0         255.255.255.0   U         0 0          0 eth0
+10.0.3.1        0.0.0.0         255.255.255.255 UH        0 0          0 eth0
+
+ANSWER 8...
+
+]0;ubuntu@ip-10-0-3-247: ~[01;32mubuntu@ip-10-0-3-247[00m:[01;34m~[00m$ netstatr[K -l
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 localhost:domain        0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN     
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN     
+udp        0      0 localhost:domain        0.0.0.0:*                          
+udp        0      0 ip-10-0-3-247.us:bootpc 0.0.0.0:*                          
+raw6       0      0 [::]:ipv6-icmp          [::]:*                  7          
+Active UNIX domain sockets (only servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     SEQPACKET  LISTENING     12318    /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     21388    /run/user/1000/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     21392    /run/user/1000/gnupg/S.gpg-agent.browser
+unix  2      [ ACC ]     STREAM     LISTENING     21393    /run/user/1000/gnupg/S.gpg-agent.ssh
+unix  2      [ ACC ]     STREAM     LISTENING     21394    /run/user/1000/gnupg/S.dirmngr
+unix  2      [ ACC ]     STREAM     LISTENING     21395    /run/user/1000/gnupg/S.gpg-agent
+unix  2      [ ACC ]     STREAM     LISTENING     21396    /run/user/1000/gnupg/S.gpg-agent.extra
+unix  2      [ ACC ]     STREAM     LISTENING     16224    /run/snapd-snap.socket
+unix  2      [ ACC ]     STREAM     LISTENING     16274    /run/acpid.socket
+unix  2      [ ACC ]     STREAM     LISTENING     16280    /var/run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     16292    /run/uuidd/request
+unix  2      [ ACC ]     STREAM     LISTENING     16214    /run/snapd.socket
+unix  2      [ ACC ]     STREAM     LISTENING     16259    /var/lib/lxd/unix.socket
+unix  2      [ ACC ]     STREAM     LISTENING     16213    @ISCSIADM_ABSTRACT_NAMESPACE
+unix  2      [ ACC ]     STREAM     LISTENING     12299    /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     12316    /run/lvm/lvmpolld.socket
+unix  2      [ ACC ]     STREAM     LISTENING     12320    /run/lvm/lvmetad.socket
+unix  2      [ ACC ]     STREAM     LISTENING     12322    /run/systemd/journal/stdout
+
+*I CHECKED MAN NETSTAT FOR MORE OPTIONS BECAUSE I COULD ONLY LISTENING PORTS WANTED TO ALSO CHECK ALL PORTS*
+
+]0;ubuntu@ip-10-0-3-247: ~[01;32mubuntu@ip-10-0-3-247[00m:[01;34m~[00m$ man netstat
+[?1049h[22;0;0t[?1h=
+NETSTAT(8)                             Linux System Administrator's Manual                            NETSTAT(8)[m
+[m
+[1mNAME[0m[m
+       netstat  -  Print  network connections, routing tables, interface statistics, masquerade connections, and[m
+       multicast memberships[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mnetstat[0m [[4maddress_family_options[24m] [[1m--tcp[0m|[1m-t[0m] [[1m--udp[0m|[1m-u[0m] [[1m--udplite[0m|[1m-U[0m] [[1m--sctp[0m|[1m-S[0m] [[1m--raw[0m|[1m-w[0m] [[1m--l2cap[0m|[1m-2[0m][m
+       [[1m--rfcomm[0m|[1m-f[0m]    [[1m--listening[0m|[1m-l[0m]    [[1m--all[0m|[1m-a[0m]    [[1m--numeric[0m|[1m-n[0m]   [[1m--numeric-hosts[0m]   [[1m--numeric-ports[0m][m
+       [[1m--numeric-users[0m] [[1m--symbolic[0m|[1m-N[0m] [[1m--extend[0m|[1m-e[0m[[1m--extend[0m|[1m-e][0m] [[1m--timers[0m|[1m-o[0m] [[1m--program[0m|[1m-p[0m]  [[1m--verbose[0m|[1m-v[0m][m
+       [[1m--continuous[0m|[1m-c][0m [[1m--wide[0m|[1m-W[0m][m
+[m
+       [1mnetstat[0m  {[1m--route[0m|[1m-r[0m}  [[4maddress_family_options[24m]  [[1m--extend[0m|[1m-e[0m[[1m--extend[0m|[1m-e][0m] [[1m--verbose[0m|[1m-v[0m] [[1m--numeric[0m|[1m-n[0m][m
+       [[1m--numeric-hosts[0m] [[1m--numeric-ports[0m] [[1m--numeric-users[0m] [[1m--continuous[0m|[1m-c[0m][m
+[m
+       [1mnetstat[0m   {[1m--interfaces[0m|[1m-i[0m}   [[1m--all[0m|[1m-a[0m]   [[1m--extend[0m|[1m-e[0m[[1m--extend[0m|[1m-e][0m]    [[1m--verbose[0m|[1m-v[0m]    [[1m--program[0m|[1m-p[0m][m
+       [[1m--numeric[0m|[1m-n[0m] [[1m--numeric-hosts[0m] [[1m--numeric-ports[0m] [[1m--numeric-users[0m] [[1m--continuous[0m|[1m-c[0m][m
+[m
+       [1mnetstat[0m  {[1m--groups[0m|[1m-g[0m}  [[1m--numeric[0m|[1m-n[0m]  [[1m--numeric-hosts[0m] [[1m--numeric-ports[0m] [[1m--numeric-users[0m] [[1m--continu‐[0m[m
+       [1mous[0m|[1m-c[0m][m
+[m
+       [1mnetstat[0m    {[1m--masquerade[0m|[1m-M[0m}    [[1m--extend[0m|[1m-e[0m]    [[1m--numeric[0m|[1m-n[0m]    [[1m--numeric-hosts[0m]    [[1m--numeric-ports[0m][m
+       [[1m--numeric-users[0m] [[1m--continuous[0m|[1m-c[0m][m
+[m
+       [1mnetstat[0m {[1m--statistics[0m|[1m-s[0m} [[1m--tcp[0m|[1m-t[0m] [[1m--udp[0m|[1m-u[0m] [[1m--udplite[0m|[1m-U[0m] [[1m--sctp[0m|[1m-S[0m] [[1m--raw[0m|[1m-w[0m][m
+[m
+[7m Manual page netstat(8) line 1 (press h for help or q to quit)[27m[K
+[K[?1l>[?1049l[23;0;0t]0;ubuntu@ip-10-0-3-247: ~[01;32mubuntu@ip-10-0-3-247[00m:[01;34m~[00m$ netstat -a
+
+*PART 8 CONTINUED*
+
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 localhost:domain        0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN     
+tcp        0    316 ip-10-0-3-247.us-we:ssh 216.106.151.72:36390    ESTABLISHED
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN     
+udp        0      0 localhost:domain        0.0.0.0:*                          
+udp        0      0 ip-10-0-3-247.us:bootpc 0.0.0.0:*                          
+raw6       0      0 [::]:ipv6-icmp          [::]:*                  7          
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ]         DGRAM                    21385    /run/user/1000/systemd/notify
+unix  2      [ ACC ]     SEQPACKET  LISTENING     12318    /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     21388    /run/user/1000/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     21392    /run/user/1000/gnupg/S.gpg-agent.browser
+unix  2      [ ACC ]     STREAM     LISTENING     21393    /run/user/1000/gnupg/S.gpg-agent.ssh
+unix  2      [ ACC ]     STREAM     LISTENING     21394    /run/user/1000/gnupg/S.dirmngr
+unix  2      [ ACC ]     STREAM     LISTENING     21395    /run/user/1000/gnupg/S.gpg-agent
+unix  2      [ ACC ]     STREAM     LISTENING     21396    /run/user/1000/gnupg/S.gpg-agent.extra
+unix  2      [ ACC ]     STREAM     LISTENING     16224    /run/snapd-snap.socket
+unix  2      [ ACC ]     STREAM     LISTENING     16274    /run/acpid.socket
+unix  2      [ ACC ]     STREAM     LISTENING     16280    /var/run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     16292    /run/uuidd/request
+unix  2      [ ACC ]     STREAM     LISTENING     16214    /run/snapd.socket
+unix  2      [ ACC ]     STREAM     LISTENING     16259    /var/lib/lxd/unix.socket
+unix  2      [ ACC ]     STREAM     LISTENING     16213    @ISCSIADM_ABSTRACT_NAMESPACE
+unix  3      [ ]         DGRAM                    12296    /run/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     12299    /run/systemd/private
+unix  6      [ ]         DGRAM                    12311    /run/systemd/journal/dev-log
+unix  2      [ ]         DGRAM                    12314    /run/systemd/journal/syslog
+unix  2      [ ACC ]     STREAM     LISTENING     12316    /run/lvm/lvmpolld.socket
+unix  2      [ ACC ]     STREAM     LISTENING     12320    /run/lvm/lvmetad.socket
+unix  2      [ ACC ]     STREAM     LISTENING     12322    /run/systemd/journal/stdout
+unix  9      [ ]         DGRAM                    12324    /run/systemd/journal/socket
+unix  3      [ ]         STREAM     CONNECTED     17724    
+unix  3      [ ]         STREAM     CONNECTED     21365    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     13659    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    21353    
+unix  3      [ ]         STREAM     CONNECTED     13004    
+unix  3      [ ]         STREAM     CONNECTED     16291    
+unix  3      [ ]         STREAM     CONNECTED     17816    
+unix  3      [ ]         STREAM     CONNECTED     17646    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     13503    
+unix  3      [ ]         STREAM     CONNECTED     16677    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21578    
+unix  3      [ ]         STREAM     CONNECTED     16868    /var/run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM                    14319    
+unix  3      [ ]         STREAM     CONNECTED     18433    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     14271    
+unix  3      [ ]         STREAM     CONNECTED     17566    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     16870    /var/run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM                    14129    
+unix  3      [ ]         STREAM     CONNECTED     13005    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17402    
+unix  3      [ ]         DGRAM                    14318    
+unix  3      [ ]         DGRAM                    14316    
+unix  2      [ ]         DGRAM                    21243    
+unix  3      [ ]         STREAM     CONNECTED     16676    
+unix  3      [ ]         STREAM     CONNECTED     16290    
+unix  2      [ ]         DGRAM                    21348    
+unix  3      [ ]         STREAM     CONNECTED     17934    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    14317    
+unix  3      [ ]         STREAM     CONNECTED     17932    
+unix  3      [ ]         DGRAM                    13510    
+unix  2      [ ]         DGRAM                    12876    
+unix  3      [ ]         STREAM     CONNECTED     18554    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17565    
+unix  3      [ ]         STREAM     CONNECTED     17290    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    12824    
+unix  3      [ ]         STREAM     CONNECTED     18432    
+unix  3      [ ]         DGRAM                    14130    
+unix  3      [ ]         STREAM     CONNECTED     16869    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    17312    
+unix  2      [ ]         DGRAM                    14313    
+unix  3      [ ]         STREAM     CONNECTED     18553    
+unix  3      [ ]         DGRAM                    12298    
+unix  3      [ ]         STREAM     CONNECTED     17644    
+unix  3      [ ]         STREAM     CONNECTED     21577    
+unix  3      [ ]         STREAM     CONNECTED     17404    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    17283    
+unix  2      [ ]         DGRAM                    15676    
+unix  3      [ ]         STREAM     CONNECTED     14272    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    13509    
+unix  3      [ ]         STREAM     CONNECTED     21342    
+unix  3      [ ]         DGRAM                    12297    
+unix  3      [ ]         STREAM     CONNECTED     17725    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17289    
+unix  3      [ ]         STREAM     CONNECTED     17817    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    15444    
+unix  3      [ ]         DGRAM                    15442    
+unix  3      [ ]         STREAM     CONNECTED     16836    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    21386    
+unix  2      [ ]         DGRAM                    16859    
+unix  3      [ ]         STREAM     CONNECTED     15407    
+unix  3      [ ]         STREAM     CONNECTED     18849    /var/run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM                    15443    
+unix  3      [ ]         STREAM     CONNECTED     18864    
+unix  3      [ ]         STREAM     CONNECTED     16834    
+unix  3      [ ]         DGRAM                    21387    
+unix  3      [ ]         DGRAM                    15441    
+unix  3      [ ]         STREAM     CONNECTED     15408    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    13505    
+unix  2      [ ]         DGRAM                    15430    
+unix  3      [ ]         STREAM     CONNECTED     16593    
+unix  3      [ ]         STREAM     CONNECTED     18695    
+unix  3      [ ]         STREAM     CONNECTED     18848    
+unix  3      [ ]         STREAM     CONNECTED     15553    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18696    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     15552    
+unix  3      [ ]         STREAM     CONNECTED     16867    
+unix  3      [ ]         STREAM     CONNECTED     18865    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16833    
+unix  3      [ ]         STREAM     CONNECTED     16595    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     16866    
+
+ANSWER 9...
+
+]0;ubuntu@ip-10-0-3-247: ~[01;32mubuntu@ip-10-0-3-247[00m:[01;34m~[00m$ sudo dpkg-- --[C[Cgetse[K[K-selections
+accountsservice					install
+acl						install
+acpid						install
+adduser						install
+apparmor					install
+apport						install
+apport-symptoms					install
+apt						install
+apt-utils					install
+at						install
+base-files					install
+base-passwd					install
+bash						install
+bash-completion					install
+bc						install
+bcache-tools					install
+bind9-host					install
+bsdmainutils					install
+bsdutils					install
+btrfs-progs					install
+btrfs-tools					install
+busybox-initramfs				install
+busybox-static					install
+byobu						install
+bzip2						install
+ca-certificates					install
+cloud-guest-utils				install
+cloud-init					install
+cloud-initramfs-copymods			install
+cloud-initramfs-dyn-netconf			install
+command-not-found				install
+command-not-found-data				install
+console-setup					install
+console-setup-linux				install
+coreutils					install
+cpio						install
+cron						install
+cryptsetup					install
+cryptsetup-bin					install
+curl						install
+dash						install
+dbus						install
+debconf						install
+debconf-i18n					install
+debianutils					install
+diffutils					install
+dirmngr						install
+distro-info-data				install
+dmeventd					install
+dmidecode					install
+dmsetup						install
+dns-root-data					install
+dnsmasq-base					install
+dnsutils					install
+dosfstools					install
+dpkg						install
+e2fsprogs					install
+eatmydata					install
+ebtables					install
+ed						install
+eject						install
+ethtool						install
+fdisk						install
+file						install
+findutils					install
+fonts-ubuntu-console				install
+friendly-recovery				install
+ftp						install
+fuse						install
+gawk						install
+gcc-8-base:amd64				install
+gdisk						install
+geoip-database					install
+gettext-base					install
+gir1.2-glib-2.0:amd64				install
+git						install
+git-man						install
+gnupg						install
+gnupg-l10n					install
+gnupg-utils					install
+gpg						install
+gpg-agent					install
+gpg-wks-client					install
+gpg-wks-server					install
+gpgconf						install
+gpgsm						install
+gpgv						install
+grep						install
+groff-base					install
+grub-common					install
+grub-gfxpayload-lists				install
+grub-legacy-ec2					install
+grub-pc						install
+grub-pc-bin					install
+grub2-common					install
+gzip						install
+hdparm						install
+hibagent					install
+hostname					install
+htop						install
+info						install
+init						install
+init-system-helpers				install
+initramfs-tools					install
+initramfs-tools-bin				install
+initramfs-tools-core				install
+install-info					install
+iproute2					install
+iptables					install
+iputils-ping					install
+iputils-tracepath				install
+irqbalance					install
+isc-dhcp-client					install
+isc-dhcp-common					install
+iso-codes					install
+kbd						install
+keyboard-configuration				install
+klibc-utils					install
+kmod						install
+krb5-locales					install
+landscape-common				install
+language-selector-common			install
+less						install
+libaccountsservice0:amd64			install
+libacl1:amd64					install
+libapparmor1:amd64				install
+libapt-inst2.0:amd64				install
+libapt-pkg5.0:amd64				install
+libargon2-0:amd64				install
+libasn1-8-heimdal:amd64				install
+libassuan0:amd64				install
+libatm1:amd64					install
+libattr1:amd64					install
+libaudit-common					install
+libaudit1:amd64					install
+libbind9-160:amd64				install
+libblkid1:amd64					install
+libbsd0:amd64					install
+libbz2-1.0:amd64				install
+libc-bin					install
+libc6:amd64					install
+libcap-ng0:amd64				install
+libcap2:amd64					install
+libcap2-bin					install
+libcom-err2:amd64				install
+libcryptsetup12:amd64				install
+libcurl3-gnutls:amd64				install
+libcurl4:amd64					install
+libdb5.3:amd64					install
+libdbus-1-3:amd64				install
+libdebconfclient0:amd64				install
+libdevmapper-event1.02.1:amd64			install
+libdevmapper1.02.1:amd64			install
+libdns-export1100				install
+libdns1100:amd64				install
+libdrm-common					install
+libdrm2:amd64					install
+libdumbnet1:amd64				install
+libeatmydata1:amd64				install
+libedit2:amd64					install
+libelf1:amd64					install
+liberror-perl					install
+libestr0:amd64					install
+libevent-2.1-6:amd64				install
+libexpat1:amd64					install
+libext2fs2:amd64				install
+libfastjson4:amd64				install
+libfdisk1:amd64					install
+libffi6:amd64					install
+libfreetype6:amd64				install
+libfribidi0:amd64				install
+libfuse2:amd64					install
+libgcc1:amd64					install
+libgcrypt20:amd64				install
+libgdbm-compat4:amd64				install
+libgdbm5:amd64					install
+libgeoip1:amd64					install
+libgirepository-1.0-1:amd64			install
+libglib2.0-0:amd64				install
+libglib2.0-data					install
+libgmp10:amd64					install
+libgnutls30:amd64				install
+libgpg-error0:amd64				install
+libgpm2:amd64					install
+libgssapi-krb5-2:amd64				install
+libgssapi3-heimdal:amd64			install
+libhcrypto4-heimdal:amd64			install
+libheimbase1-heimdal:amd64			install
+libheimntlm0-heimdal:amd64			install
+libhogweed4:amd64				install
+libhx509-5-heimdal:amd64			install
+libicu60:amd64					install
+libidn11:amd64					install
+libidn2-0:amd64					install
+libip4tc0:amd64					install
+libip6tc0:amd64					install
+libiptc0:amd64					install
+libirs160:amd64					install
+libisc-export169:amd64				install
+libisc169:amd64					install
+libisccc160:amd64				install
+libisccfg160:amd64				install
+libisns0:amd64					install
+libjson-c3:amd64				install
+libk5crypto3:amd64				install
+libkeyutils1:amd64				install
+libklibc					install
+libkmod2:amd64					install
+libkrb5-26-heimdal:amd64			install
+libkrb5-3:amd64					install
+libkrb5support0:amd64				install
+libksba8:amd64					install
+libldap-2.4-2:amd64				install
+libldap-common					install
+liblocale-gettext-perl				install
+liblvm2app2.2:amd64				install
+liblvm2cmd2.02:amd64				install
+liblwres160:amd64				install
+liblxc-common					install
+liblxc1						install
+liblz4-1:amd64					install
+liblzma5:amd64					install
+liblzo2-2:amd64					install
+libmagic-mgc					install
+libmagic1:amd64					install
+libmnl0:amd64					install
+libmount1:amd64					install
+libmpdec2:amd64					install
+libmpfr6:amd64					install
+libmspack0:amd64				install
+libncurses5:amd64				install
+libncursesw5:amd64				install
+libnetfilter-conntrack3:amd64			install
+libnettle6:amd64				install
+libnewt0.52:amd64				install
+libnfnetlink0:amd64				install
+libnghttp2-14:amd64				install
+libnih1:amd64					install
+libnpth0:amd64					install
+libnss-systemd:amd64				install
+libntfs-3g88					install
+libnuma1:amd64					install
+libp11-kit0:amd64				install
+libpam-cap:amd64				install
+libpam-modules:amd64				install
+libpam-modules-bin				install
+libpam-runtime					install
+libpam-systemd:amd64				install
+libpam0g:amd64					install
+libparted2:amd64				install
+libpcap0.8:amd64				install
+libpci3:amd64					install
+libpcre3:amd64					install
+libperl5.26:amd64				install
+libpipeline1:amd64				install
+libplymouth4:amd64				install
+libpng16-16:amd64				install
+libpolkit-agent-1-0:amd64			install
+libpolkit-backend-1-0:amd64			install
+libpolkit-gobject-1-0:amd64			install
+libpopt0:amd64					install
+libprocps6:amd64				install
+libpsl5:amd64					install
+libpython3-stdlib:amd64				install
+libpython3.6:amd64				install
+libpython3.6-minimal:amd64			install
+libpython3.6-stdlib:amd64			install
+libreadline5:amd64				install
+libreadline7:amd64				install
+libroken18-heimdal:amd64			install
+librtmp1:amd64					install
+libsasl2-2:amd64				install
+libsasl2-modules:amd64				install
+libsasl2-modules-db:amd64			install
+libseccomp2:amd64				install
+libselinux1:amd64				install
+libsemanage-common				install
+libsemanage1:amd64				install
+libsepol1:amd64					install
+libsigsegv2:amd64				install
+libslang2:amd64					install
+libsmartcols1:amd64				install
+libsqlite3-0:amd64				install
+libss2:amd64					install
+libssl1.0.0:amd64				install
+libssl1.1:amd64					install
+libstdc++6:amd64				install
+libsystemd0:amd64				install
+libtasn1-6:amd64				install
+libtext-charwidth-perl				install
+libtext-iconv-perl				install
+libtext-wrapi18n-perl				install
+libtinfo5:amd64					install
+libudev1:amd64					install
+libunistring2:amd64				install
+libunwind8:amd64				install
+libusb-1.0-0:amd64				install
+libutempter0:amd64				install
+libuuid1:amd64					install
+libuv1:amd64					install
+libwind0-heimdal:amd64				install
+libwrap0:amd64					install
+libx11-6:amd64					install
+libx11-data					install
+libxau6:amd64					install
+libxcb1:amd64					install
+libxdmcp6:amd64					install
+libxext6:amd64					install
+libxml2:amd64					install
+libxmlsec1:amd64				install
+libxmlsec1-openssl:amd64			install
+libxmuu1:amd64					install
+libxslt1.1:amd64				install
+libxtables12:amd64				install
+libyaml-0-2:amd64				install
+libzstd1:amd64					install
+linux-aws					install
+linux-aws-headers-4.15.0-1032			install
+linux-aws-headers-4.15.0-1043			install
+linux-base					install
+linux-headers-4.15.0-1032-aws			install
+linux-headers-4.15.0-1043-aws			install
+linux-headers-aws				install
+linux-image-4.15.0-1032-aws			install
+linux-image-4.15.0-1043-aws			install
+linux-image-aws					install
+linux-modules-4.15.0-1032-aws			install
+linux-modules-4.15.0-1043-aws			install
+locales						install
+login						install
+logrotate					install
+lsb-base					install
+lsb-release					install
+lshw						install
+lsof						install
+ltrace						install
+lvm2						install
+lxcfs						install
+lxd						install
+lxd-client					install
+man-db						install
+manpages					install
+mawk						install
+mdadm						install
+mime-support					install
+mlocate						install
+mount						install
+mtr-tiny					install
+multiarch-support				install
+nano						install
+ncurses-base					install
+ncurses-bin					install
+ncurses-term					install
+net-tools					install
+netbase						install
+netcat-openbsd					install
+netplan.io					install
+networkd-dispatcher				install
+nplan						install
+ntfs-3g						install
+open-iscsi					install
+open-vm-tools					install
+openssh-client					install
+openssh-server					install
+openssh-sftp-server				install
+openssl						install
+os-prober					install
+overlayroot					install
+parted						install
+passwd						install
+pastebinit					install
+patch						install
+pciutils					install
+perl						install
+perl-base					install
+perl-modules-5.26				install
+pinentry-curses					install
+plymouth					install
+plymouth-theme-ubuntu-text			install
+policykit-1					install
+pollinate					install
+popularity-contest				install
+powermgmt-base					install
+procps						install
+psmisc						install
+publicsuffix					install
+python-apt-common				install
+python3						install
+python3-apport					install
+python3-apt					install
+python3-asn1crypto				install
+python3-attr					install
+python3-automat					install
+python3-blinker					install
+python3-certifi					install
+python3-cffi-backend				install
+python3-chardet					install
+python3-click					install
+python3-colorama				install
+python3-commandnotfound				install
+python3-configobj				install
+python3-constantly				install
+python3-cryptography				install
+python3-dbus					install
+python3-debconf					install
+python3-debian					install
+python3-distro-info				install
+python3-distupgrade				install
+python3-gdbm:amd64				install
+python3-gi					install
+python3-httplib2				install
+python3-hyperlink				install
+python3-idna					install
+python3-incremental				install
+python3-jinja2					install
+python3-json-pointer				install
+python3-jsonpatch				install
+python3-jsonschema				install
+python3-jwt					install
+python3-markupsafe				install
+python3-minimal					install
+python3-netifaces				install
+python3-newt:amd64				install
+python3-oauthlib				install
+python3-openssl					install
+python3-pam					install
+python3-pkg-resources				install
+python3-problem-report				install
+python3-pyasn1					install
+python3-pyasn1-modules				install
+python3-requests				install
+python3-requests-unixsocket			install
+python3-serial					install
+python3-service-identity			install
+python3-six					install
+python3-software-properties			install
+python3-systemd					install
+python3-twisted					install
+python3-twisted-bin:amd64			install
+python3-update-manager				install
+python3-urllib3					install
+python3-yaml					install
+python3-zope.interface				install
+python3.6					install
+python3.6-minimal				install
+readline-common					install
+rsync						install
+rsyslog						install
+run-one						install
+screen						install
+sed						install
+sensible-utils					install
+shared-mime-info				install
+snapd						install
+software-properties-common			install
+sosreport					install
+squashfs-tools					install
+ssh-import-id					install
+strace						install
+sudo						install
+systemd						install
+systemd-sysv					install
+sysvinit-utils					install
+tar						install
+tcpdump						install
+telnet						install
+time						install
+tmux						install
+tzdata						install
+ubuntu-advantage-tools				install
+ubuntu-keyring					install
+ubuntu-minimal					install
+ubuntu-release-upgrader-core			install
+ubuntu-server					install
+ubuntu-standard					install
+ucf						install
+udev						install
+ufw						install
+uidmap						install
+unattended-upgrades				install
+update-manager-core				install
+update-notifier-common				install
+ureadahead					install
+usbutils					install
+util-linux					install
+uuid-runtime					install
+vim						install
+vim-common					install
+vim-runtime					install
+vim-tiny					install
+wget						install
+whiptail					install
+xauth						install
+xdelta3						install
+xdg-user-dirs					install
+xfsprogs					install
+xkb-data					install
+xxd						install
+xz-utils					install
+zerofree					install
+zlib1g:amd64					install
+
+ANSWER 10...
+
+]0;ubuntu@ip-10-0-3-247: ~[01;32mubuntu@ip-10-0-3-247[00m:[01;34m~[00m$ sudo apt update
+[33m
+0% [Working][0m
+            
+Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+[33m
+0% [Connecting to security.ubuntu.com (91.189.88.149)][0m
+                                                      
+Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+
+                                                      
+Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+[33m
+0% [Connecting to security.ubuntu.com (91.189.88.149)][0m[33m
+0% [1 InRelease gpgv 242 kB] [Connecting to security.ubuntu.com (91.189.88.149)][0m[33m
+                                                                                
+0% [Connecting to security.ubuntu.com (91.189.88.149)][0m[33m
+0% [2 InRelease gpgv 88.7 kB] [Connecting to security.ubuntu.com (91.189.88.149)][0m[33m
+                                                                                 
+0% [Waiting for headers][0m[33m
+0% [3 InRelease gpgv 74.6 kB] [Waiting for headers] [Waiting for headers][0m
+                                                                         
+Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe Sources [249 kB]
+[33m
+0% [3 InRelease gpgv 74.6 kB] [4 Sources 163 kB/249 kB 66%] [Waiting for headers][0m[33m
+                                                                                 
+0% [3 InRelease gpgv 74.6 kB] [Waiting for headers][0m[33m
+0% [4 Sources store 0 B] [3 InRelease gpgv 74.6 kB] [Waiting for headers] [Waiting for headers][0m
+                                                                                               
+Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main Sources [283 kB]
+[33m
+0% [4 Sources store 0 B] [3 InRelease gpgv 74.6 kB] [5 Sources 45.1 kB/283 kB 16%] [Waiting for headers][0m[33m
+                                                                                                        
+0% [4 Sources store 0 B] [3 InRelease gpgv 74.6 kB] [Waiting for headers][0m
+                                                                         
+Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [679 kB]
+[33m
+0% [4 Sources store 0 B] [3 InRelease gpgv 74.6 kB] [6 Packages 0 B/679 kB 0%] [Waiting for headers][0m[33m
+                                                                                                    
+0% [4 Sources store 0 B] [3 InRelease gpgv 74.6 kB] [Waiting for headers][0m
+                                                                         
+Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [249 kB]
+[33m
+0% [4 Sources store 0 B] [3 InRelease gpgv 74.6 kB] [7 Translation-en 0 B/249 kB 0%] [Waiting for headers][0m[33m
+                                                                                                          
+0% [4 Sources store 0 B] [3 InRelease gpgv 74.6 kB] [Waiting for headers][0m
+                                                                         
+Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [969 kB]
+[33m
+0% [4 Sources store 0 B] [3 InRelease gpgv 74.6 kB] [8 Packages 0 B/969 kB 0%] [Waiting for headers][0m[33m
+                                                                                                    
+0% [4 Sources store 0 B] [3 InRelease gpgv 74.6 kB] [Waiting for headers][0m
+                                                                         
+Get:9 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+[33m
+0% [4 Sources store 0 B] [3 InRelease gpgv 74.6 kB] [9 InRelease 2586 B/88.7 kB 3%][0m[33m
+                                                                                   
+0% [3 InRelease gpgv 74.6 kB] [9 InRelease 5482 B/88.7 kB 6%][0m[33m
+0% [5 Sources store 0 B] [3 InRelease gpgv 74.6 kB] [9 InRelease 5482 B/88.7 kB 6%][0m[33m
+                                                                                   
+0% [3 InRelease gpgv 74.6 kB] [9 InRelease 14.2 kB/88.7 kB 16%][0m[33m
+0% [6 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [9 InRelease 14.2 kB/88.7 kB 16%][0m[33m
+                                                                                      
+0% [6 Packages store 0 B] [9 InRelease 14.2 kB/88.7 kB 16%][0m[33m
+                                                           
+0% [9 InRelease 31.5 kB/88.7 kB 36%][0m[33m
+0% [7 Translation-en store 0 B] [9 InRelease 31.5 kB/88.7 kB 36%][0m[33m
+                                                                 
+0% [9 InRelease 43.1 kB/88.7 kB 49%][0m[33m
+0% [8 Packages store 0 B] [9 InRelease 43.1 kB/88.7 kB 49%][0m[33m
+                                                           
+0% [8 Packages store 0 B][0m[33m
+0% [8 Packages store 0 B] [9 InRelease gpgv 88.7 kB][0m[33m
+                                                    
+0% [9 InRelease gpgv 88.7 kB][0m[33m
+                             
+86% [Working][0m
+             
+Get:10 http://security.ubuntu.com/ubuntu bionic-security/main Sources [116 kB]
+[33m
+86% [10 Sources 2687 B/116 kB 2%][0m[33m
+                                 
+89% [Working][0m[33m
+89% [10 Sources store 0 B][0m[33m
+                          
+89% [Waiting for headers][0m
+                         
+Get:11 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [448 kB]
+[33m
+89% [11 Packages 2687 B/448 kB 1%][0m[33m
+                                  
+100% [Working][0m[33m
+100% [11 Packages store 0 B][0m[33m
+                            
+100% [Working][0m
+              
+Fetched 3245 kB in 2s (1941 kB/s)
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 5%
+
+Reading package lists... 5%
+
+Reading package lists... 7%
+
+Reading package lists... 7%
+
+Reading package lists... 7%
+
+Reading package lists... 7%
+
+Reading package lists... 7%
+
+Reading package lists... 7%
+
+Reading package lists... 50%
+
+Reading package lists... 50%
+
+Reading package lists... 73%
+
+Reading package lists... 73%
+
+Reading package lists... 73%
+
+Reading package lists... 73%
+
+Reading package lists... 74%
+
+Reading package lists... 74%
+
+Reading package lists... 78%
+
+Reading package lists... 78%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 80%
+
+Reading package lists... 81%
+
+Reading package lists... 87%
+
+Reading package lists... 87%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 89%
+
+Reading package lists... 92%
+
+Reading package lists... 92%
+
+Reading package lists... 94%
+
+Reading package lists... 94%
+
+Reading package lists... 94%
+
+Reading package lists... 94%
+
+Reading package lists... 94%
+
+Reading package lists... 94%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... Done
+
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree       
+
+
+Reading state information... 0%
+
+Reading state information... 7%
+
+Reading state information... Done
+
+90 packages can be upgraded. Run 'apt list --upgradable' to see them.
+]0;ubuntu@ip-10-0-3-247: ~[01;32mubuntu@ip-10-0-3-247[00m:[01;34m~[00m$ sudo apt-dist[K[K[K[K[K dist-upgrade
+
+Reading package lists... 0%
+
+Reading package lists... 100%
+
+Reading package lists... Done
+
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree       
+
+
+Reading state information... 0%
+
+Reading state information... 7%
+
+Reading state information... Done
+
+
+Calculating upgrade... 0%
+
+Calculating upgrade... 10%
+
+Calculating upgrade... Done
+
+The following packages will be upgraded:
+  apport apt apt-utils bash bzip2 cloud-init console-setup console-setup-linux debconf debconf-i18n grub-common
+  grub-pc grub-pc-bin grub2-common initramfs-tools initramfs-tools-bin initramfs-tools-core
+  keyboard-configuration landscape-common language-selector-common libapt-inst2.0 libapt-pkg5.0 libbz2-1.0
+  libdrm-common libdrm2 libidn11 libldap-2.4-2 libldap-common libnss-systemd libnuma1 libpam-modules
+  libpam-modules-bin libpam-runtime libpam-systemd libpam0g libparted2 libpci3 libplymouth4 libpython3.6
+  libpython3.6-minimal libpython3.6-stdlib libssl1.1 libsystemd0 libudev1 libunistring2 libx11-6 libx11-data
+  libxcb1 login mdadm netplan.io nplan open-iscsi open-vm-tools openssl parted passwd pciutils plymouth
+  plymouth-theme-ubuntu-text python-apt-common python3-apport python3-apt python3-cryptography python3-debconf
+  python3-distro-info python3-distupgrade python3-gdbm python3-gi python3-httplib2 python3-problem-report
+  python3-software-properties python3-update-manager python3.6 python3.6-minimal snapd software-properties-common
+  systemd systemd-sysv ubuntu-minimal ubuntu-release-upgrader-core ubuntu-server ubuntu-standard udev ufw uidmap
+  unattended-upgrades update-manager-core update-notifier-common ureadahead
+90 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 40.1 MB of archives.
+After this operation, 4090 kB disk space will be freed.
+Do you want to continue? [Y/n] y
+[33m
+0% [Working][0m
+            
+Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 bash amd64 4.4.18-2ubuntu1.1 [615 kB]
+[33m
+0% [1 bash 0 B/615 kB 0%][0m[33m
+                         
+1% [Working][0m
+            
+Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 login amd64 1:4.5-1ubuntu2 [308 kB]
+[33m
+1% [2 login 0 B/308 kB 0%][0m[33m
+                          
+2% [Working][0m
+            
+Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 bzip2 amd64 1.0.6-8.1ubuntu0.2 [33.9 kB]
+[33m
+2% [3 bzip2 0 B/33.9 kB 0%][0m[33m
+                           
+3% [Working][0m
+            
+Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libbz2-1.0 amd64 1.0.6-8.1ubuntu0.2 [31.2 kB]
+[33m
+3% [4 libbz2-1.0 0 B/31.2 kB 0%][0m[33m
+                                
+3% [Working][0m
+            
+Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnss-systemd amd64 237-3ubuntu10.24 [105 kB]
+[33m
+3% [5 libnss-systemd 0 B/105 kB 0%][0m[33m
+                                   
+3% [Working][0m
+            
+Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsystemd0 amd64 237-3ubuntu10.24 [204 kB]
+[33m
+3% [6 libsystemd0 0 B/204 kB 0%][0m[33m
+                                
+4% [Working][0m
+            
+Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpam-systemd amd64 237-3ubuntu10.24 [108 kB]
+[33m
+4% [7 libpam-systemd 0 B/108 kB 0%][0m[33m
+                                   
+4% [Working][0m
+            
+Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 systemd amd64 237-3ubuntu10.24 [2903 kB]
+[33m
+4% [8 systemd 0 B/2903 kB 0%][0m[33m
+                             
+10% [Working][0m
+             
+Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 udev amd64 237-3ubuntu10.24 [1101 kB]
+[33m
+10% [9 udev 0 B/1101 kB 0%][0m[33m
+                           
+13% [Working][0m
+             
+Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libudev1 amd64 237-3ubuntu10.24 [53.6 kB]
+[33m
+13% [10 libudev1 0 B/53.6 kB 0%][0m[33m
+                                
+13% [Working][0m
+             
+Get:11 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libapt-inst2.0 amd64 1.6.11 [55.6 kB]
+[33m
+13% [11 libapt-inst2.0 0 B/55.6 kB 0%][0m[33m
+                                      
+13% [Working][0m
+             
+Get:12 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python-apt-common all 1.6.4 [16.2 kB]
+[33m
+13% [12 python-apt-common 0 B/16.2 kB 0%][0m[33m
+                                         
+14% [Working][0m
+             
+Get:13 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-apt amd64 1.6.4 [148 kB]
+[33m
+14% [13 python3-apt 0 B/148 kB 0%][0m[33m
+                                  
+14% [Working][0m
+             
+Get:14 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-debconf all 1.5.66ubuntu1 [4060 B]
+[33m
+14% [14 python3-debconf 0 B/4060 B 0%][0m[33m
+                                      
+14% [Working][0m
+             
+Get:15 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ubuntu-release-upgrader-core all 1:18.04.34 [25.2 kB]
+[33m
+14% [15 ubuntu-release-upgrader-core 0 B/25.2 kB 0%][0m[33m
+                                                    
+15% [Working][0m
+             
+Get:16 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-distro-info all 0.18ubuntu0.18.04.1 [9296 B]
+[33m
+15% [16 python3-distro-info 0 B/9296 B 0%][0m[33m
+                                          
+15% [Working][0m
+             
+Get:17 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 update-manager-core all 1:18.04.11.10 [8500 B]
+[33m
+15% [17 update-manager-core 0 B/8500 B 0%][0m[33m
+                                          
+15% [Working][0m
+             
+Get:18 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-update-manager all 1:18.04.11.10 [35.1 kB]
+[33m
+15% [18 python3-update-manager 0 B/35.1 kB 0%][0m[33m
+                                              
+16% [Working][0m
+             
+Get:19 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-distupgrade all 1:18.04.34 [107 kB]
+[33m
+16% [19 python3-distupgrade 0 B/107 kB 0%][0m[33m
+                                          
+16% [Working][0m
+             
+Get:20 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 debconf-i18n all 1.5.66ubuntu1 [205 kB]
+[33m
+16% [20 debconf-i18n 0 B/205 kB 0%][0m[33m
+                                   
+17% [Working][0m
+             
+Get:21 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 debconf all 1.5.66ubuntu1 [124 kB]
+[33m
+17% [21 debconf 0 B/124 kB 0%][0m[33m
+                              
+17% [Working][0m
+             
+Get:22 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 update-notifier-common all 3.192.1.7 [160 kB]
+[33m
+17% [22 update-notifier-common 0 B/160 kB 0%][0m[33m
+                                             
+18% [Working][0m
+             
+Get:23 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpam0g amd64 1.1.8-3.6ubuntu2.18.04.1 [55.1 kB]
+[33m
+18% [23 libpam0g 0 B/55.1 kB 0%][0m[33m
+                                
+18% [Working][0m
+             
+Get:24 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpam-modules-bin amd64 1.1.8-3.6ubuntu2.18.04.1 [36.7 kB]
+[33m
+18% [24 libpam-modules-bin 0 B/36.7 kB 0%][0m[33m
+                                          
+18% [Working][0m
+             
+Get:25 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpam-modules amd64 1.1.8-3.6ubuntu2.18.04.1 [242 kB]
+[33m
+18% [25 libpam-modules 0 B/242 kB 0%][0m[33m
+                                     
+19% [Working][0m
+             
+Get:26 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpam-runtime all 1.1.8-3.6ubuntu2.18.04.1 [37.1 kB]
+[33m
+19% [26 libpam-runtime 0 B/37.1 kB 0%][0m[33m
+                                      
+19% [Working][0m
+             
+Get:27 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 initramfs-tools all 0.130ubuntu3.8 [9592 B]
+[33m
+19% [27 initramfs-tools 0 B/9592 B 0%][0m[33m
+                                      
+19% [Working][0m
+             
+Get:28 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 initramfs-tools-core all 0.130ubuntu3.8 [48.2 kB]
+[33m
+19% [28 initramfs-tools-core 0 B/48.2 kB 0%][0m[33m
+                                            
+20% [Working][0m
+             
+Get:29 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 initramfs-tools-bin amd64 0.130ubuntu3.8 [12.7 kB]
+[33m
+20% [29 initramfs-tools-bin 0 B/12.7 kB 0%][0m[33m
+                                           
+20% [Working][0m
+             
+Get:30 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 systemd-sysv amd64 237-3ubuntu10.24 [11.4 kB]
+[33m
+20% [30 systemd-sysv 0 B/11.4 kB 0%][0m[33m
+                                    
+20% [Working][0m
+             
+Get:31 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libapt-pkg5.0 amd64 1.6.11 [806 kB]
+[33m
+20% [31 libapt-pkg5.0 0 B/806 kB 0%][0m[33m
+                                    
+22% [Working][0m
+             
+Get:32 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 snapd amd64 2.39.2+18.04 [13.1 MB]
+[33m
+22% [32 snapd 0 B/13.1 MB 0%][0m[33m
+                             
+48% [Working][0m
+             
+Get:33 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apt amd64 1.6.11 [1166 kB]
+[33m
+48% [33 apt 0 B/1166 kB 0%][0m[33m
+                           
+51% [Working][0m
+             
+Get:34 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apt-utils amd64 1.6.11 [206 kB]
+[33m
+51% [34 apt-utils 0 B/206 kB 0%][0m[33m
+                                
+52% [Working][0m
+             
+Get:35 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 console-setup-linux all 1.178ubuntu2.9 [982 kB]
+[33m
+52% [35 console-setup-linux 0 B/982 kB 0%][0m[33m
+                                          
+54% [Working][0m
+             
+Get:36 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 console-setup all 1.178ubuntu2.9 [105 kB]
+[33m
+54% [36 console-setup 0 B/105 kB 0%][0m[33m
+                                    
+54% [Working][0m
+             
+Get:37 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 keyboard-configuration all 1.178ubuntu2.9 [369 kB]
+[33m
+54% [37 keyboard-configuration 0 B/369 kB 0%][0m[33m
+                                             
+55% [Working][0m
+             
+Get:38 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpython3.6 amd64 3.6.8-1~18.04.1 [1418 kB]
+[33m
+55% [38 libpython3.6 0 B/1418 kB 0%][0m[33m
+                                    
+58% [Working][0m
+             
+Get:39 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libssl1.1 amd64 1.1.1-1ubuntu2.1~18.04.3 [1295 kB]
+[33m
+58% [39 libssl1.1 0 B/1295 kB 0%][0m[33m
+                                 
+61% [Working][0m
+             
+Get:40 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3.6 amd64 3.6.8-1~18.04.1 [202 kB]
+[33m
+61% [40 python3.6 0 B/202 kB 0%][0m[33m
+                                
+62% [Working][0m
+             
+Get:41 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3.6-minimal amd64 3.6.8-1~18.04.1 [1620 kB]
+[33m
+62% [41 python3.6-minimal 0 B/1620 kB 0%][0m[33m
+                                         
+65% [Working][0m
+             
+Get:42 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpython3.6-stdlib amd64 3.6.8-1~18.04.1 [1715 kB]
+[33m
+65% [42 libpython3.6-stdlib 0 B/1715 kB 0%][0m[33m
+                                           
+69% [Working][0m
+             
+Get:43 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpython3.6-minimal amd64 3.6.8-1~18.04.1 [533 kB]
+[33m
+69% [43 libpython3.6-minimal 0 B/533 kB 0%][0m[33m
+                                           
+70% [Working][0m
+             
+Get:44 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 language-selector-common all 0.188.2 [219 kB]
+[33m
+70% [44 language-selector-common 0 B/219 kB 0%][0m[33m
+                                               
+71% [Working][0m
+             
+Get:45 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 open-iscsi amd64 2.0.874-5ubuntu2.7 [280 kB]
+[33m
+71% [45 open-iscsi 0 B/280 kB 0%][0m[33m
+                                 
+72% [Working][0m
+             
+Get:46 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 passwd amd64 1:4.5-1ubuntu2 [816 kB]
+[33m
+72% [46 passwd 0 B/816 kB 0%][0m[33m
+                             
+73% [Working][0m
+             
+Get:47 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libunistring2 amd64 0.9.9-0ubuntu2 [368 kB]
+[33m
+73% [47 libunistring2 0 B/368 kB 0%][0m[33m
+                                    
+74% [Working][0m
+             
+Get:48 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libidn11 amd64 1.33-2.1ubuntu1.2 [46.6 kB]
+[33m
+74% [48 libidn11 0 B/46.6 kB 0%][0m[33m
+                                
+75% [Working][0m
+             
+Get:49 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 netplan.io amd64 0.97-0ubuntu1~18.04.1 [60.6 kB]
+[33m
+75% [49 netplan.io 0 B/60.6 kB 0%][0m[33m
+                                  
+75% [Working][0m
+             
+Get:50 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 nplan all 0.97-0ubuntu1~18.04.1 [1800 B]
+[33m
+75% [50 nplan 0 B/1800 B 0%][0m[33m
+                            
+75% [Working][0m
+             
+Get:51 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 openssl amd64 1.1.1-1ubuntu2.1~18.04.3 [614 kB]
+[33m
+75% [51 openssl 0 B/614 kB 0%][0m[33m
+                              
+77% [Working][0m
+             
+Get:52 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-gi amd64 3.26.1-2ubuntu1 [153 kB]
+[33m
+77% [52 python3-gi 0 B/153 kB 0%][0m[33m
+                                 
+77% [Working][0m
+             
+Get:53 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ubuntu-minimal amd64 1.417.1 [2744 B]
+[33m
+77% [53 ubuntu-minimal 0 B/2744 B 0%][0m[33m
+                                     
+77% [Working][0m
+             
+Get:54 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libdrm-common all 2.4.97-1ubuntu1~18.04.1 [5216 B]
+[33m
+77% [54 libdrm-common 0 B/5216 B 0%][0m[33m
+                                    
+78% [Working][0m
+             
+Get:55 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libdrm2 amd64 2.4.97-1ubuntu1~18.04.1 [31.3 kB]
+[33m
+78% [55 libdrm2 0 B/31.3 kB 0%][0m[33m
+                               
+78% [Working][0m
+             
+Get:56 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnuma1 amd64 2.0.11-2.1ubuntu0.1 [22.0 kB]
+[33m
+78% [56 libnuma1 0 B/22.0 kB 0%][0m[33m
+                                
+78% [Working][0m
+             
+Get:57 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 parted amd64 3.2-20ubuntu0.2 [42.4 kB]
+[33m
+78% [57 parted 0 B/42.4 kB 0%][0m[33m
+                              
+79% [Working][0m
+             
+Get:58 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libparted2 amd64 3.2-20ubuntu0.2 [123 kB]
+[33m
+79% [58 libparted2 0 B/123 kB 0%][0m[33m
+                                 
+79% [Working][0m
+             
+Get:59 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 pciutils amd64 1:3.5.2-1ubuntu1.1 [257 kB]
+[33m
+79% [59 pciutils 0 B/257 kB 0%][0m[33m
+                               
+80% [Working][0m
+             
+Get:60 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpci3 amd64 1:3.5.2-1ubuntu1.1 [24.1 kB]
+[33m
+80% [60 libpci3 0 B/24.1 kB 0%][0m[33m
+                               
+80% [Working][0m
+             
+Get:61 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libplymouth4 amd64 0.9.3-1ubuntu7.18.04.2 [87.5 kB]
+[33m
+80% [61 libplymouth4 0 B/87.5 kB 0%][0m[33m
+                                    
+80% [Working][0m
+             
+Get:62 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libx11-data all 2:1.6.4-3ubuntu0.2 [113 kB]
+[33m
+80% [62 libx11-data 0 B/113 kB 0%][0m[33m
+                                  
+81% [Working][0m
+             
+Get:63 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libxcb1 amd64 1.13-2~ubuntu18.04 [45.5 kB]
+[33m
+81% [63 libxcb1 0 B/45.5 kB 0%][0m[33m
+                               
+81% [Working][0m
+             
+Get:64 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libx11-6 amd64 2:1.6.4-3ubuntu0.2 [569 kB]
+[33m
+81% [64 libx11-6 0 B/569 kB 0%][0m[33m
+                               
+83% [Working][0m
+             
+Get:65 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 plymouth-theme-ubuntu-text amd64 0.9.3-1ubuntu7.18.04.2 [9060 B]
+[33m
+83% [65 plymouth-theme-ubuntu-text 0 B/9060 B 0%][0m[33m
+                                                 
+83% [Working][0m
+             
+Get:66 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 plymouth amd64 0.9.3-1ubuntu7.18.04.2 [108 kB]
+[33m
+83% [66 plymouth 0 B/108 kB 0%][0m[33m
+                               
+83% [Working][0m
+             
+Get:67 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-gdbm amd64 3.6.8-1~18.04 [13.3 kB]
+[33m
+83% [67 python3-gdbm 0 B/13.3 kB 0%][0m[33m
+                                    
+83% [Working][0m
+             
+Get:68 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ubuntu-standard amd64 1.417.1 [2800 B]
+[33m
+83% [68 ubuntu-standard 0 B/2800 B 0%][0m[33m
+                                      
+84% [Working][0m
+             
+Get:69 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ufw all 0.36-0ubuntu0.18.04.1 [146 kB]
+[33m
+84% [69 ufw 0 B/146 kB 0%][0m[33m
+                          
+84% [Working][0m
+             
+Get:70 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ureadahead amd64 0.100.0-21 [19.4 kB]
+[33m
+84% [70 ureadahead 0 B/19.4 kB 0%][0m[33m
+                                  
+84% [Working][0m
+             
+Get:71 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 grub-pc amd64 2.02-2ubuntu8.13 [138 kB]
+[33m
+84% [71 grub-pc 0 B/138 kB 0%][0m[33m
+                              
+85% [Working][0m
+             
+Get:72 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 grub2-common amd64 2.02-2ubuntu8.13 [533 kB]
+[33m
+85% [72 grub2-common 0 B/533 kB 0%][0m[33m
+                                   
+86% [Working][0m
+             
+Get:73 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 grub-pc-bin amd64 2.02-2ubuntu8.13 [900 kB]
+[33m
+86% [73 grub-pc-bin 0 B/900 kB 0%][0m[33m
+                                  
+88% [Working][0m
+             
+Get:74 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 grub-common amd64 2.02-2ubuntu8.13 [1771 kB]
+[33m
+88% [74 grub-common 0 B/1771 kB 0%][0m[33m
+                                   
+92% [Working][0m
+             
+Get:75 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-httplib2 all 0.9.2+dfsg-1ubuntu0.1 [28.6 kB]
+[33m
+92% [75 python3-httplib2 0 B/28.6 kB 0%][0m[33m
+                                        
+92% [Working][0m
+             
+Get:76 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-problem-report all 2.20.9-0ubuntu7.6 [9884 B]
+[33m
+92% [76 python3-problem-report 0 B/9884 B 0%][0m[33m
+                                             
+93% [Working][0m
+             
+Get:77 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-apport all 2.20.9-0ubuntu7.6 [81.7 kB]
+[33m
+93% [77 python3-apport 0 B/81.7 kB 0%][0m[33m
+                                      
+93% [Working][0m
+             
+Get:78 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apport all 2.20.9-0ubuntu7.6 [124 kB]
+[33m
+93% [78 apport 0 B/124 kB 0%][0m[33m
+                             
+93% [Working][0m
+             
+Get:79 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 landscape-common amd64 18.01-0ubuntu3.3 [85.3 kB]
+[33m
+93% [79 landscape-common 0 B/85.3 kB 0%][0m[33m
+                                        
+94% [Working][0m
+             
+Get:80 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-common all 2.4.45+dfsg-1ubuntu1.2 [16.7 kB]
+[33m
+94% [80 libldap-common 0 B/16.7 kB 0%][0m[33m
+                                      
+94% [Working][0m
+             
+Get:81 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-2.4-2 amd64 2.4.45+dfsg-1ubuntu1.2 [155 kB]
+[33m
+94% [81 libldap-2.4-2 0 B/155 kB 0%][0m[33m
+                                    
+95% [Working][0m
+             
+Get:82 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 mdadm amd64 4.1~rc1-3~ubuntu18.04.2 [416 kB]
+[33m
+95% [82 mdadm 0 B/416 kB 0%][0m[33m
+                            
+96% [Working][0m
+             
+Get:83 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-cryptography amd64 2.1.4-1ubuntu1.3 [221 kB]
+[33m
+96% [83 python3-cryptography 0 B/221 kB 0%][0m[33m
+                                           
+96% [Working][0m
+             
+Get:84 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 software-properties-common all 0.96.24.32.9 [9992 B]
+[33m
+96% [84 software-properties-common 0 B/9992 B 0%][0m[33m
+                                                 
+97% [Working][0m
+             
+Get:85 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-software-properties all 0.96.24.32.9 [23.8 kB]
+[33m
+97% [85 python3-software-properties 0 B/23.8 kB 0%][0m[33m
+                                                   
+97% [Working][0m
+             
+Get:86 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 open-vm-tools amd64 2:10.3.10-1~ubuntu0.18.04.1 [545 kB]
+[33m
+97% [86 open-vm-tools 0 B/545 kB 0%][0m[33m
+                                    
+98% [Working][0m
+             
+Get:87 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ubuntu-server amd64 1.417.1 [2656 B]
+[33m
+98% [87 ubuntu-server 0 B/2656 B 0%][0m[33m
+                                    
+98% [Working][0m
+             
+Get:88 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 uidmap amd64 1:4.5-1ubuntu2 [65.7 kB]
+[33m
+98% [88 uidmap 0 B/65.7 kB 0%][0m[33m
+                              
+99% [Working][0m
+             
+Get:89 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 unattended-upgrades all 1.1ubuntu1.18.04.11 [41.0 kB]
+[33m
+99% [89 unattended-upgrades 0 B/41.0 kB 0%][0m[33m
+                                           
+99% [Working][0m
+             
+Get:90 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 cloud-init all 19.1-1-gbaa47854-0ubuntu1~18.04.1 [393 kB]
+[33m
+99% [90 cloud-init 0 B/393 kB 0%][0m[33m
+                                 
+100% [Working][0m
+              
+Fetched 40.1 MB in 1s (40.2 MB/s)
+
+Extracting templates from packages: 33%
+Extracting templates from packages: 66%
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+
+7[0;26r8[1A(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../bash_4.4.18-2ubuntu1.1_amd64.deb ...
+7[27;0f[42m[30mProgress: [  0%][49m[39m [.............................................................................................] 8Unpacking bash (4.4.18-2ubuntu1.1) over (4.4.18-2ubuntu1) ...
+Setting up bash (4.4.18-2ubuntu1.1) ...
+update-alternatives: using /usr/share/man/man7/bash-builtins.7.gz to provide /usr/share/man/man7/builtins.7.gz (builtins.7.gz) in auto mode
+7[27;0f[42m[30mProgress: [  1%][49m[39m [#............................................................................................] 8(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../login_1%3a4.5-1ubuntu2_amd64.deb ...
+Unpacking login (1:4.5-1ubuntu2) over (1:4.5-1ubuntu1) ...
+Setting up login (1:4.5-1ubuntu2) ...
+7[27;0f[42m[30mProgress: [  2%][49m[39m [##...........................................................................................] 8(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.6-8.1ubuntu0.2_amd64.deb ...
+Unpacking bzip2 (1.0.6-8.1ubuntu0.2) over (1.0.6-8.1ubuntu0.1) ...
+Preparing to unpack .../libbz2-1.0_1.0.6-8.1ubuntu0.2_amd64.deb ...
+7[27;0f[42m[30mProgress: [  3%][49m[39m [##...........................................................................................] 8Unpacking libbz2-1.0:amd64 (1.0.6-8.1ubuntu0.2) over (1.0.6-8.1ubuntu0.1) ...
+Setting up libbz2-1.0:amd64 (1.0.6-8.1ubuntu0.2) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../libnss-systemd_237-3ubuntu10.24_amd64.deb ...
+7[27;0f[42m[30mProgress: [  4%][49m[39m [###..........................................................................................] 8Unpacking libnss-systemd:amd64 (237-3ubuntu10.24) over (237-3ubuntu10.19) ...
+Preparing to unpack .../libsystemd0_237-3ubuntu10.24_amd64.deb ...
+Unpacking libsystemd0:amd64 (237-3ubuntu10.24) over (237-3ubuntu10.19) ...
+7[27;0f[42m[30mProgress: [  5%][49m[39m [####.........................................................................................] 8Setting up libsystemd0:amd64 (237-3ubuntu10.24) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../libpam-systemd_237-3ubuntu10.24_amd64.deb ...
+Unpacking libpam-systemd:amd64 (237-3ubuntu10.24) over (237-3ubuntu10.19) ...
+7[27;0f[42m[30mProgress: [  6%][49m[39m [#####........................................................................................] 8Preparing to unpack .../systemd_237-3ubuntu10.24_amd64.deb ...
+Unpacking systemd (237-3ubuntu10.24) over (237-3ubuntu10.19) ...
+7[27;0f[42m[30mProgress: [  7%][49m[39m [######.......................................................................................] 8Preparing to unpack .../udev_237-3ubuntu10.24_amd64.deb ...
+Unpacking udev (237-3ubuntu10.24) over (237-3ubuntu10.19) ...
+Preparing to unpack .../libudev1_237-3ubuntu10.24_amd64.deb ...
+Unpacking libudev1:amd64 (237-3ubuntu10.24) over (237-3ubuntu10.19) ...
+7[27;0f[42m[30mProgress: [  8%][49m[39m [#######......................................................................................] 8Setting up libudev1:amd64 (237-3ubuntu10.24) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../00-libapt-inst2.0_1.6.11_amd64.deb ...
+7[27;0f[42m[30mProgress: [  9%][49m[39m [########.....................................................................................] 8Unpacking libapt-inst2.0:amd64 (1.6.11) over (1.6.8) ...
+Preparing to unpack .../01-python-apt-common_1.6.4_all.deb ...
+Unpacking python-apt-common (1.6.4) over (1.6.3ubuntu1) ...
+7[27;0f[42m[30mProgress: [ 10%][49m[39m [#########....................................................................................] 8Preparing to unpack .../02-python3-apt_1.6.4_amd64.deb ...
+Unpacking python3-apt (1.6.4) over (1.6.3ubuntu1) ...
+Preparing to unpack .../03-python3-debconf_1.5.66ubuntu1_all.deb ...
+7[27;0f[42m[30mProgress: [ 11%][49m[39m [##########...................................................................................] 8Unpacking python3-debconf (1.5.66ubuntu1) over (1.5.66) ...
+Preparing to unpack .../04-ubuntu-release-upgrader-core_1%3a18.04.34_all.deb ...
+Unpacking ubuntu-release-upgrader-core (1:18.04.34) over (1:18.04.30) ...
+7[27;0f[42m[30mProgress: [ 12%][49m[39m [###########..................................................................................] 8Preparing to unpack .../05-python3-distro-info_0.18ubuntu0.18.04.1_all.deb ...
+Unpacking python3-distro-info (0.18ubuntu0.18.04.1) over (0.18) ...
+Preparing to unpack .../06-update-manager-core_1%3a18.04.11.10_all.deb ...
+7[27;0f[42m[30mProgress: [ 13%][49m[39m [############.................................................................................] 8Unpacking update-manager-core (1:18.04.11.10) over (1:18.04.11.9) ...
+Preparing to unpack .../07-python3-update-manager_1%3a18.04.11.10_all.deb ...
+Unpacking python3-update-manager (1:18.04.11.10) over (1:18.04.11.9) ...
+7[27;0f[42m[30mProgress: [ 14%][49m[39m [#############................................................................................] 8Preparing to unpack .../08-python3-distupgrade_1%3a18.04.34_all.deb ...
+Unpacking python3-distupgrade (1:18.04.34) over (1:18.04.30) ...
+Preparing to unpack .../09-debconf-i18n_1.5.66ubuntu1_all.deb ...
+7[27;0f[42m[30mProgress: [ 15%][49m[39m [##############...............................................................................] 8Unpacking debconf-i18n (1.5.66ubuntu1) over (1.5.66) ...
+Preparing to unpack .../10-debconf_1.5.66ubuntu1_all.deb ...
+Unpacking debconf (1.5.66ubuntu1) over (1.5.66) ...
+7[27;0f[42m[30mProgress: [ 16%][49m[39m [###############..............................................................................] 8Setting up debconf (1.5.66ubuntu1) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../update-notifier-common_3.192.1.7_all.deb ...
+Unpacking update-notifier-common (3.192.1.7) over (3.192.1.5) ...
+7[27;0f[42m[30mProgress: [ 17%][49m[39m [###############..............................................................................] 8Preparing to unpack .../libpam0g_1.1.8-3.6ubuntu2.18.04.1_amd64.deb ...
+Unpacking libpam0g:amd64 (1.1.8-3.6ubuntu2.18.04.1) over (1.1.8-3.6ubuntu2) ...
+Setting up libpam0g:amd64 (1.1.8-3.6ubuntu2.18.04.1) ...
+7[27;0f[42m[30mProgress: [ 18%][49m[39m [################.............................................................................] 8(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../libpam-modules-bin_1.1.8-3.6ubuntu2.18.04.1_amd64.deb ...
+Unpacking libpam-modules-bin (1.1.8-3.6ubuntu2.18.04.1) over (1.1.8-3.6ubuntu2) ...
+7[27;0f[42m[30mProgress: [ 19%][49m[39m [#################............................................................................] 8Setting up libpam-modules-bin (1.1.8-3.6ubuntu2.18.04.1) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../libpam-modules_1.1.8-3.6ubuntu2.18.04.1_amd64.deb ...
+Unpacking libpam-modules:amd64 (1.1.8-3.6ubuntu2.18.04.1) over (1.1.8-3.6ubuntu2) ...
+7[27;0f[42m[30mProgress: [ 20%][49m[39m [##################...........................................................................] 8Setting up libpam-modules:amd64 (1.1.8-3.6ubuntu2.18.04.1) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../libpam-runtime_1.1.8-3.6ubuntu2.18.04.1_all.deb ...
+Unpacking libpam-runtime (1.1.8-3.6ubuntu2.18.04.1) over (1.1.8-3.6ubuntu2) ...
+7[27;0f[42m[30mProgress: [ 21%][49m[39m [###################..........................................................................] 8Setting up libpam-runtime (1.1.8-3.6ubuntu2.18.04.1) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../initramfs-tools_0.130ubuntu3.8_all.deb ...
+Unpacking initramfs-tools (0.130ubuntu3.8) over (0.130ubuntu3.6) ...
+7[27;0f[42m[30mProgress: [ 22%][49m[39m [####################.........................................................................] 8Preparing to unpack .../initramfs-tools-core_0.130ubuntu3.8_all.deb ...
+Unpacking initramfs-tools-core (0.130ubuntu3.8) over (0.130ubuntu3.6) ...
+7[27;0f[42m[30mProgress: [ 23%][49m[39m [#####################........................................................................] 8Preparing to unpack .../initramfs-tools-bin_0.130ubuntu3.8_amd64.deb ...
+Unpacking initramfs-tools-bin (0.130ubuntu3.8) over (0.130ubuntu3.6) ...
+Setting up systemd (237-3ubuntu10.24) ...
+7[27;0f[42m[30mProgress: [ 24%][49m[39m [######################.......................................................................] 8(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../systemd-sysv_237-3ubuntu10.24_amd64.deb ...
+Unpacking systemd-sysv (237-3ubuntu10.24) over (237-3ubuntu10.19) ...
+Preparing to unpack .../libapt-pkg5.0_1.6.11_amd64.deb ...
+7[27;0f[42m[30mProgress: [ 25%][49m[39m [#######################......................................................................] 8Unpacking libapt-pkg5.0:amd64 (1.6.11) over (1.6.8) ...
+Setting up libapt-pkg5.0:amd64 (1.6.11) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84108 files and directories currently installed.)
+Preparing to unpack .../snapd_2.39.2+18.04_amd64.deb ...
+7[27;0f[42m[30mProgress: [ 26%][49m[39m [########################.....................................................................] 8Unpacking snapd (2.39.2+18.04) over (2.37.4+18.04.1) ...
+Preparing to unpack .../archives/apt_1.6.11_amd64.deb ...
+Unpacking apt (1.6.11) over (1.6.8) ...
+7[27;0f[42m[30mProgress: [ 27%][49m[39m [#########################....................................................................] 8Setting up apt (1.6.11) ...
+Installing new version of config file /etc/apt/apt.conf.d/01autoremove ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84109 files and directories currently installed.)
+Preparing to unpack .../00-apt-utils_1.6.11_amd64.deb ...
+Unpacking apt-utils (1.6.11) over (1.6.8) ...
+7[27;0f[42m[30mProgress: [ 28%][49m[39m [##########################...................................................................] 8Preparing to unpack .../01-console-setup-linux_1.178ubuntu2.9_all.deb ...
+Unpacking console-setup-linux (1.178ubuntu2.9) over (1.178ubuntu2.7) ...
+Preparing to unpack .../02-console-setup_1.178ubuntu2.9_all.deb ...
+7[27;0f[42m[30mProgress: [ 29%][49m[39m [###########################..................................................................] 8Unpacking console-setup (1.178ubuntu2.9) over (1.178ubuntu2.7) ...
+Preparing to unpack .../03-keyboard-configuration_1.178ubuntu2.9_all.deb ...
+Unpacking keyboard-configuration (1.178ubuntu2.9) over (1.178ubuntu2.7) ...
+7[27;0f[42m[30mProgress: [ 30%][49m[39m [###########################..................................................................] 8Preparing to unpack .../04-libpython3.6_3.6.8-1~18.04.1_amd64.deb ...
+Unpacking libpython3.6:amd64 (3.6.8-1~18.04.1) over (3.6.7-1~18.04) ...
+Preparing to unpack .../05-libssl1.1_1.1.1-1ubuntu2.1~18.04.3_amd64.deb ...
+7[27;0f[42m[30mProgress: [ 31%][49m[39m [############################.................................................................] 8Unpacking libssl1.1:amd64 (1.1.1-1ubuntu2.1~18.04.3) over (1.1.0g-2ubuntu4.3) ...
+Preparing to unpack .../06-python3.6_3.6.8-1~18.04.1_amd64.deb ...
+Unpacking python3.6 (3.6.8-1~18.04.1) over (3.6.7-1~18.04) ...
+7[27;0f[42m[30mProgress: [ 32%][49m[39m [#############################................................................................] 8Preparing to unpack .../07-python3.6-minimal_3.6.8-1~18.04.1_amd64.deb ...
+Unpacking python3.6-minimal (3.6.8-1~18.04.1) over (3.6.7-1~18.04) ...
+Preparing to unpack .../08-libpython3.6-stdlib_3.6.8-1~18.04.1_amd64.deb ...
+7[27;0f[42m[30mProgress: [ 33%][49m[39m [##############################...............................................................] 8Unpacking libpython3.6-stdlib:amd64 (3.6.8-1~18.04.1) over (3.6.7-1~18.04) ...
+Preparing to unpack .../09-libpython3.6-minimal_3.6.8-1~18.04.1_amd64.deb ...
+Unpacking libpython3.6-minimal:amd64 (3.6.8-1~18.04.1) over (3.6.7-1~18.04) ...
+7[27;0f[42m[30mProgress: [ 34%][49m[39m [###############################..............................................................] 8Preparing to unpack .../10-language-selector-common_0.188.2_all.deb ...
+Unpacking language-selector-common (0.188.2) over (0.188.1) ...
+Preparing to unpack .../11-open-iscsi_2.0.874-5ubuntu2.7_amd64.deb ...
+7[27;0f[42m[30mProgress: [ 35%][49m[39m [################################.............................................................] 8Unpacking open-iscsi (2.0.874-5ubuntu2.7) over (2.0.874-5ubuntu2.6) ...
+Preparing to unpack .../12-passwd_1%3a4.5-1ubuntu2_amd64.deb ...
+Unpacking passwd (1:4.5-1ubuntu2) over (1:4.5-1ubuntu1) ...
+7[27;0f[42m[30mProgress: [ 36%][49m[39m [#################################............................................................] 8Setting up passwd (1:4.5-1ubuntu2) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84110 files and directories currently installed.)
+Preparing to unpack .../libunistring2_0.9.9-0ubuntu2_amd64.deb ...
+Unpacking libunistring2:amd64 (0.9.9-0ubuntu2) over (0.9.9-0ubuntu1) ...
+7[27;0f[42m[30mProgress: [ 37%][49m[39m [##################################...........................................................] 8Setting up libunistring2:amd64 (0.9.9-0ubuntu2) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 84110 files and directories currently installed.)
+Preparing to unpack .../00-libidn11_1.33-2.1ubuntu1.2_amd64.deb ...
+Unpacking libidn11:amd64 (1.33-2.1ubuntu1.2) over (1.33-2.1ubuntu1) ...
+7[27;0f[42m[30mProgress: [ 38%][49m[39m [###################################..........................................................] 8Preparing to unpack .../01-netplan.io_0.97-0ubuntu1~18.04.1_amd64.deb ...
+Unpacking netplan.io (0.97-0ubuntu1~18.04.1) over (0.40.1~18.04.4) ...
+7[27;0f[42m[30mProgress: [ 39%][49m[39m [####################################.........................................................] 8Preparing to unpack .../02-nplan_0.97-0ubuntu1~18.04.1_all.deb ...
+Unpacking nplan (0.97-0ubuntu1~18.04.1) over (0.40.1~18.04.4) ...
+Preparing to unpack .../03-openssl_1.1.1-1ubuntu2.1~18.04.3_amd64.deb ...
+Unpacking openssl (1.1.1-1ubuntu2.1~18.04.3) over (1.1.0g-2ubuntu4.3) ...
+7[27;0f[42m[30mProgress: [ 40%][49m[39m [#####################################........................................................] 8Preparing to unpack .../04-python3-gi_3.26.1-2ubuntu1_amd64.deb ...
+Unpacking python3-gi (3.26.1-2ubuntu1) over (3.26.1-2) ...
+7[27;0f[42m[30mProgress: [ 41%][49m[39m [######################################.......................................................] 8Preparing to unpack .../05-ubuntu-minimal_1.417.1_amd64.deb ...
+Unpacking ubuntu-minimal (1.417.1) over (1.417) ...
+Preparing to unpack .../06-libdrm-common_2.4.97-1ubuntu1~18.04.1_all.deb ...
+Unpacking libdrm-common (2.4.97-1ubuntu1~18.04.1) over (2.4.95-1~18.04.1) ...
+7[27;0f[42m[30mProgress: [ 42%][49m[39m [#######################################......................................................] 8Preparing to unpack .../07-libdrm2_2.4.97-1ubuntu1~18.04.1_amd64.deb ...
+Unpacking libdrm2:amd64 (2.4.97-1ubuntu1~18.04.1) over (2.4.95-1~18.04.1) ...
+7[27;0f[42m[30mProgress: [ 43%][49m[39m [########################################.....................................................] 8Preparing to unpack .../08-libnuma1_2.0.11-2.1ubuntu0.1_amd64.deb ...
+Unpacking libnuma1:amd64 (2.0.11-2.1ubuntu0.1) over (2.0.11-2.1) ...
+Preparing to unpack .../09-parted_3.2-20ubuntu0.2_amd64.deb ...
+Unpacking parted (3.2-20ubuntu0.2) over (3.2-20ubuntu0.1) ...
+7[27;0f[42m[30mProgress: [ 44%][49m[39m [#########################################....................................................] 8Preparing to unpack .../10-libparted2_3.2-20ubuntu0.2_amd64.deb ...
+Unpacking libparted2:amd64 (3.2-20ubuntu0.2) over (3.2-20ubuntu0.1) ...
+7[27;0f[42m[30mProgress: [ 45%][49m[39m [#########################################....................................................] 8Preparing to unpack .../11-pciutils_1%3a3.5.2-1ubuntu1.1_amd64.deb ...
+Unpacking pciutils (1:3.5.2-1ubuntu1.1) over (1:3.5.2-1ubuntu1) ...
+Preparing to unpack .../12-libpci3_1%3a3.5.2-1ubuntu1.1_amd64.deb ...
+Unpacking libpci3:amd64 (1:3.5.2-1ubuntu1.1) over (1:3.5.2-1ubuntu1) ...
+7[27;0f[42m[30mProgress: [ 46%][49m[39m [##########################################...................................................] 8Preparing to unpack .../13-libplymouth4_0.9.3-1ubuntu7.18.04.2_amd64.deb ...
+Unpacking libplymouth4:amd64 (0.9.3-1ubuntu7.18.04.2) over (0.9.3-1ubuntu7.18.04.1) ...
+7[27;0f[42m[30mProgress: [ 47%][49m[39m [###########################################..................................................] 8Preparing to unpack .../14-libx11-data_2%3a1.6.4-3ubuntu0.2_all.deb ...
+Unpacking libx11-data (2:1.6.4-3ubuntu0.2) over (2:1.6.4-3ubuntu0.1) ...
+Preparing to unpack .../15-libxcb1_1.13-2~ubuntu18.04_amd64.deb ...
+Unpacking libxcb1:amd64 (1.13-2~ubuntu18.04) over (1.13-1) ...
+7[27;0f[42m[30mProgress: [ 48%][49m[39m [############################################.................................................] 8Preparing to unpack .../16-libx11-6_2%3a1.6.4-3ubuntu0.2_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.6.4-3ubuntu0.2) over (2:1.6.4-3ubuntu0.1) ...
+7[27;0f[42m[30mProgress: [ 49%][49m[39m [#############################################................................................] 8Preparing to unpack .../17-plymouth-theme-ubuntu-text_0.9.3-1ubuntu7.18.04.2_amd64.deb ...
+Unpacking plymouth-theme-ubuntu-text (0.9.3-1ubuntu7.18.04.2) over (0.9.3-1ubuntu7.18.04.1) ...
+Preparing to unpack .../18-plymouth_0.9.3-1ubuntu7.18.04.2_amd64.deb ...
+Unpacking plymouth (0.9.3-1ubuntu7.18.04.2) over (0.9.3-1ubuntu7.18.04.1) ...
+7[27;0f[42m[30mProgress: [ 50%][49m[39m [##############################################...............................................] 8Preparing to unpack .../19-python3-gdbm_3.6.8-1~18.04_amd64.deb ...
+Unpacking python3-gdbm:amd64 (3.6.8-1~18.04) over (3.6.7-1~18.04) ...
+Preparing to unpack .../20-ubuntu-standard_1.417.1_amd64.deb ...
+7[27;0f[42m[30mProgress: [ 51%][49m[39m [###############################################..............................................] 8Unpacking ubuntu-standard (1.417.1) over (1.417) ...
+Preparing to unpack .../21-ufw_0.36-0ubuntu0.18.04.1_all.deb ...
+Unpacking ufw (0.36-0ubuntu0.18.04.1) over (0.35-5) ...
+7[27;0f[42m[30mProgress: [ 52%][49m[39m [################################################.............................................] 8Preparing to unpack .../22-ureadahead_0.100.0-21_amd64.deb ...
+Unpacking ureadahead (0.100.0-21) over (0.100.0-20) ...
+Preparing to unpack .../23-grub-pc_2.02-2ubuntu8.13_amd64.deb ...
+7[27;0f[42m[30mProgress: [ 53%][49m[39m [#################################################............................................] 8Unpacking grub-pc (2.02-2ubuntu8.13) over (2.02-2ubuntu8.12) ...
+Preparing to unpack .../24-grub2-common_2.02-2ubuntu8.13_amd64.deb ...
+Unpacking grub2-common (2.02-2ubuntu8.13) over (2.02-2ubuntu8.12) ...
+7[27;0f[42m[30mProgress: [ 54%][49m[39m [##################################################...........................................] 8Preparing to unpack .../25-grub-pc-bin_2.02-2ubuntu8.13_amd64.deb ...
+Unpacking grub-pc-bin (2.02-2ubuntu8.13) over (2.02-2ubuntu8.12) ...
+Preparing to unpack .../26-grub-common_2.02-2ubuntu8.13_amd64.deb ...
+7[27;0f[42m[30mProgress: [ 55%][49m[39m [###################################################..........................................] 8Unpacking grub-common (2.02-2ubuntu8.13) over (2.02-2ubuntu8.12) ...
+Preparing to unpack .../27-python3-httplib2_0.9.2+dfsg-1ubuntu0.1_all.deb ...
+Unpacking python3-httplib2 (0.9.2+dfsg-1ubuntu0.1) over (0.9.2+dfsg-1) ...
+7[27;0f[42m[30mProgress: [ 56%][49m[39m [####################################################.........................................] 8Preparing to unpack .../28-python3-problem-report_2.20.9-0ubuntu7.6_all.deb ...
+Unpacking python3-problem-report (2.20.9-0ubuntu7.6) over (2.20.9-0ubuntu7.5) ...
+Preparing to unpack .../29-python3-apport_2.20.9-0ubuntu7.6_all.deb ...
+7[27;0f[42m[30mProgress: [ 57%][49m[39m [#####################################################........................................] 8Unpacking python3-apport (2.20.9-0ubuntu7.6) over (2.20.9-0ubuntu7.5) ...
+Preparing to unpack .../30-apport_2.20.9-0ubuntu7.6_all.deb ...
+Unpacking apport (2.20.9-0ubuntu7.6) over (2.20.9-0ubuntu7.5) ...
+7[27;0f[42m[30mProgress: [ 58%][49m[39m [#####################################################........................................] 8Preparing to unpack .../31-landscape-common_18.01-0ubuntu3.3_amd64.deb ...
+Unpacking landscape-common (18.01-0ubuntu3.3) over (18.01-0ubuntu3.2) ...
+Preparing to unpack .../32-libldap-common_2.4.45+dfsg-1ubuntu1.2_all.deb ...
+7[27;0f[42m[30mProgress: [ 59%][49m[39m [#######################################################......................................] 8Unpacking libldap-common (2.4.45+dfsg-1ubuntu1.2) over (2.4.45+dfsg-1ubuntu1.1) ...
+Preparing to unpack .../33-libldap-2.4-2_2.4.45+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.2) over (2.4.45+dfsg-1ubuntu1.1) ...
+7[27;0f[42m[30mProgress: [ 60%][49m[39m [#######################################################......................................] 8Preparing to unpack .../34-mdadm_4.1~rc1-3~ubuntu18.04.2_amd64.deb ...
+Unpacking mdadm (4.1~rc1-3~ubuntu18.04.2) over (4.1~rc1-3~ubuntu18.04.1) ...
+Preparing to unpack .../35-python3-cryptography_2.1.4-1ubuntu1.3_amd64.deb ...
+7[27;0f[42m[30mProgress: [ 61%][49m[39m [########################################################.....................................] 8Unpacking python3-cryptography (2.1.4-1ubuntu1.3) over (2.1.4-1ubuntu1.2) ...
+Preparing to unpack .../36-software-properties-common_0.96.24.32.9_all.deb ...
+Unpacking software-properties-common (0.96.24.32.9) over (0.96.24.32.7) ...
+7[27;0f[42m[30mProgress: [ 62%][49m[39m [#########################################################....................................] 8Preparing to unpack .../37-python3-software-properties_0.96.24.32.9_all.deb ...
+Unpacking python3-software-properties (0.96.24.32.9) over (0.96.24.32.7) ...
+Preparing to unpack .../38-open-vm-tools_2%3a10.3.10-1~ubuntu0.18.04.1_amd64.deb ...
+7[27;0f[42m[30mProgress: [ 63%][49m[39m [##########################################################...................................] 8Unpacking open-vm-tools (2:10.3.10-1~ubuntu0.18.04.1) over (2:10.3.0-0ubuntu1~18.04.3) ...
+Preparing to unpack .../39-ubuntu-server_1.417.1_amd64.deb ...
+Unpacking ubuntu-server (1.417.1) over (1.417) ...
+7[27;0f[42m[30mProgress: [ 64%][49m[39m [###########################################################..................................] 8Preparing to unpack .../40-uidmap_1%3a4.5-1ubuntu2_amd64.deb ...
+Unpacking uidmap (1:4.5-1ubuntu2) over (1:4.5-1ubuntu1) ...
+Preparing to unpack .../41-unattended-upgrades_1.1ubuntu1.18.04.11_all.deb ...
+7[27;0f[42m[30mProgress: [ 65%][49m[39m [############################################################.................................] 8Unpacking unattended-upgrades (1.1ubuntu1.18.04.11) over (1.1ubuntu1.18.04.8) ...
+Preparing to unpack .../42-cloud-init_19.1-1-gbaa47854-0ubuntu1~18.04.1_all.deb ...
+Unpacking cloud-init (19.1-1-gbaa47854-0ubuntu1~18.04.1) over (18.4-0ubuntu1~18.04.1) ...
+7[27;0f[42m[30mProgress: [ 66%][49m[39m [#############################################################................................] 8Setting up python-apt-common (1.6.4) ...
+Setting up libapt-inst2.0:amd64 (1.6.11) ...
+7[27;0f[42m[30mProgress: [ 67%][49m[39m [##############################################################...............................] 8Setting up libnss-systemd:amd64 (237-3ubuntu10.24) ...
+Setting up python3-distro-info (0.18ubuntu0.18.04.1) ...
+Setting up ufw (0.36-0ubuntu0.18.04.1) ...
+Installing new version of config file /etc/default/ufw ...
+7[27;0f[42m[30mProgress: [ 68%][49m[39m [###############################################################..............................] 8Replacing config file /etc/ufw/before.rules with new version
+Replacing config file /etc/ufw/before6.rules with new version
+Setting up keyboard-configuration (1.178ubuntu2.9) ...
+Your console font configuration will be updated the next time your system
+boots. If you want to update it now, run 'setupcon' from a virtual console.
+update-initramfs: deferring update (trigger activated)
+Setting up libparted2:amd64 (3.2-20ubuntu0.2) ...
+7[27;0f[42m[30mProgress: [ 69%][49m[39m [################################################################.............................] 8Setting up python3-apt (1.6.4) ...
+Processing triggers for mime-support (3.60ubuntu1) ...
+Setting up ureadahead (0.100.0-21) ...
+7[27;0f[42m[30mProgress: [ 70%][49m[39m [#################################################################............................] 8Setting up libldap-common (2.4.45+dfsg-1ubuntu1.2) ...
+Setting up apt-utils (1.6.11) ...
+7[27;0f[42m[30mProgress: [ 71%][49m[39m [##################################################################...........................] 8Processing triggers for install-info (6.5.0.dfsg.1-2) ...
+Setting up debconf-i18n (1.5.66ubuntu1) ...
+Setting up libnuma1:amd64 (2.0.11-2.1ubuntu0.1) ...
+Setting up systemd-sysv (237-3ubuntu10.24) ...
+7[27;0f[42m[30mProgress: [ 72%][49m[39m [###################################################################..........................] 8Setting up language-selector-common (0.188.2) ...
+Installing new version of config file /etc/fonts/conf.avail/69-language-selector-ja.conf ...
+Setting up netplan.io (0.97-0ubuntu1~18.04.1) ...
+7[27;0f[42m[30mProgress: [ 73%][49m[39m [###################################################################..........................] 8Setting up python3-gi (3.26.1-2ubuntu1) ...
+Setting up parted (3.2-20ubuntu0.2) ...
+7[27;0f[42m[30mProgress: [ 74%][49m[39m [####################################################################.........................] 8Setting up uidmap (1:4.5-1ubuntu2) ...
+Setting up bzip2 (1.0.6-8.1ubuntu0.2) ...
+7[27;0f[42m[30mProgress: [ 75%][49m[39m [#####################################################################........................] 8Setting up libdrm-common (2.4.97-1ubuntu1~18.04.1) ...
+Setting up python3-problem-report (2.20.9-0ubuntu7.6) ...
+Setting up python3-debconf (1.5.66ubuntu1) ...
+7[27;0f[42m[30mProgress: [ 76%][49m[39m [######################################################################.......................] 8Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Setting up udev (237-3ubuntu10.24) ...
+update-initramfs: deferring update (trigger activated)
+Setting up libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.2) ...
+7[27;0f[42m[30mProgress: [ 77%][49m[39m [#######################################################################......................] 8Setting up nplan (0.97-0ubuntu1~18.04.1) ...
+Setting up grub-common (2.02-2ubuntu8.13) ...
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+7[27;0f[42m[30mProgress: [ 78%][49m[39m [########################################################################.....................] 8Setting up libssl1.1:amd64 (1.1.1-1ubuntu2.1~18.04.3) ...
+Checking for services that may need to be restarted...done.
+Checking for services that may need to be restarted...done.
+Checking init scripts...
+[?1049h[22;0;0t[1;26r[4l[?25l(B[m[37m[40m[1;26r[H[2J[1;1H[97m[45m[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[1;1H[37mPackage configuration[7;3H[30m[47m┌──────────────────────────────────────┤ [31mConfiguring libssl1.1:amd64[30m ├───────────────────────────────────────┐[8;3H│                                                                                                            │[97m[40m [9;3H[30m[47m│ There are services installed on your system which need to be restarted when certain libraries, such as     │[97m[40m [10;3H[30m[47m│ libpam, libc, and libssl, are upgraded. Since these restarts may cause interruptions of service for the    │[97m[40m [11;3H[30m[47m│ system, you will normally be prompted on each upgrade for the list of services you wish to restart.  You   │[97m[40m [12;3H[30m[47m│ can choose this option to avoid being prompted; instead, all necessary restarts will be done for you       │[97m[40m [13;3H[30m[47m│ automatically so you can avoid being asked questions on each library upgrade.                              │[97m[40m [14;3H[30m[47m│                                                                                                            │[97m[40m [15;3H[30m[47m│ Restart services during package upgrades without asking?                                                   │[97m[40m [16;3H[30m[47m│                                                                                                            │[97m[40m [17;3H[30m[47m│                               <Yes>                                  [37m[41m<No>[30m[47m                                  │[97m[40m [18;3H[30m[47m│                                                                                                            │[97m[40m [19;3H[30m[47m└────────────────────────────────────────────────────────────────────────────────────────────────────────────┘[97m[40m [20;4H                                                                                                              [17;75H[17;35H[37m[41m<Yes>[34C[30m[47m<No>[17;36H[?12l[?25h[26;1H[37m[40m(B[m[39;49m
+[K
+[?1049l[23;0;0t
+Restarting services possibly affected by the upgrade:
+
+Services restarted successfully.
+
+Setting up python3-httplib2 (0.9.2+dfsg-1ubuntu0.1) ...
+7[27;0f[42m[30mProgress: [ 79%][49m[39m [#########################################################################....................] 8Setting up openssl (1.1.1-1ubuntu2.1~18.04.3) ...
+Installing new version of config file /etc/ssl/openssl.cnf ...
+Setting up libplymouth4:amd64 (0.9.3-1ubuntu7.18.04.2) ...
+Setting up unattended-upgrades (1.1ubuntu1.18.04.11) ...
+7[27;0f[42m[30mProgress: [ 80%][49m[39m [##########################################################################...................] 8Setting up python3-gdbm:amd64 (3.6.8-1~18.04) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Setting up python3-software-properties (0.96.24.32.9) ...
+7[27;0f[42m[30mProgress: [ 81%][49m[39m [###########################################################################..................] 8Setting up initramfs-tools-bin (0.130ubuntu3.8) ...
+Processing triggers for dbus (1.12.2-1ubuntu1.1) ...
+Setting up console-setup-linux (1.178ubuntu2.9) ...
+7[27;0f[42m[30mProgress: [ 82%][49m[39m [############################################################################.................] 8Setting up libpci3:amd64 (1:3.5.2-1ubuntu1.1) ...
+Setting up libxcb1:amd64 (1.13-2~ubuntu18.04) ...
+7[27;0f[42m[30mProgress: [ 83%][49m[39m [#############################################################################................] 8Setting up libx11-data (2:1.6.4-3ubuntu0.2) ...
+Setting up libidn11:amd64 (1.33-2.1ubuntu1.2) ...
+Processing triggers for rsyslog (8.32.0-1ubuntu4) ...
+Setting up cloud-init (19.1-1-gbaa47854-0ubuntu1~18.04.1) ...
+Installing new version of config file /etc/cloud/cloud.cfg ...
+Installing new version of config file /etc/cloud/templates/chef_client.rb.tmpl ...
+Installing new version of config file /etc/cloud/templates/sources.list.ubuntu.tmpl ...
+7[27;0f[42m[30mProgress: [ 84%][49m[39m [##############################################################################...............] 8Setting up software-properties-common (0.96.24.32.9) ...
+Setting up python3-cryptography (2.1.4-1ubuntu1.3) ...
+7[27;0f[42m[30mProgress: [ 85%][49m[39m [###############################################################################..............] 8Setting up console-setup (1.178ubuntu2.9) ...
+update-initramfs: deferring update (trigger activated)
+Setting up libpam-systemd:amd64 (237-3ubuntu10.24) ...
+7[27;0f[42m[30mProgress: [ 86%][49m[39m [################################################################################.............] 8Setting up grub-pc-bin (2.02-2ubuntu8.13) ...
+Setting up landscape-common (18.01-0ubuntu3.3) ...
+Setting up initramfs-tools-core (0.130ubuntu3.8) ...
+7[27;0f[42m[30mProgress: [ 87%][49m[39m [#################################################################################............] 8Setting up libx11-6:amd64 (2:1.6.4-3ubuntu0.2) ...
+Setting up grub2-common (2.02-2ubuntu8.13) ...
+7[27;0f[42m[30mProgress: [ 88%][49m[39m [#################################################################################............] 8Setting up initramfs-tools (0.130ubuntu3.8) ...
+update-initramfs: deferring update (trigger activated)
+Setting up python3-apport (2.20.9-0ubuntu7.6) ...
+Setting up open-iscsi (2.0.874-5ubuntu2.7) ...
+7[27;0f[42m[30mProgress: [ 89%][49m[39m [##################################################################################...........] 8Setting up mdadm (4.1~rc1-3~ubuntu18.04.2) ...
+update-initramfs: deferring update (trigger activated)
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/50-cloudimg-settings.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.15.0-1043-aws
+Found initrd image: /boot/initrd.img-4.15.0-1043-aws
+Found linux image: /boot/vmlinuz-4.15.0-1032-aws
+Found initrd image: /boot/initrd.img-4.15.0-1032-aws
+File descriptor 3 (pipe:[38118]) leaked on lvs invocation. Parent PID 11229: /bin/sh
+done
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+Setting up libdrm2:amd64 (2.4.97-1ubuntu1~18.04.1) ...
+Setting up plymouth (0.9.3-1ubuntu7.18.04.2) ...
+7[27;0f[42m[30mProgress: [ 90%][49m[39m [###################################################################################..........] 8update-initramfs: deferring update (trigger activated)
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+Setting up libpython3.6-minimal:amd64 (3.6.8-1~18.04.1) ...
+Setting up snapd (2.39.2+18.04) ...
+Installing new version of config file /etc/apparmor.d/usr.lib.snapd.snap-confine.real ...
+md5sum: /etc/apparmor.d/usr.lib.snapd.snap-confine: No such file or directory
+snapd.failure.service is a disabled or a static unit, not starting it.
+snapd.snap-repair.service is a disabled or a static unit, not starting it.
+7[27;0f[42m[30mProgress: [ 91%][49m[39m [####################################################################################.........] 8Processing triggers for systemd (237-3ubuntu10.24) ...
+Setting up apport (2.20.9-0ubuntu7.6) ...
+apport-autoreport.service is a disabled or a static unit, not starting it.
+7[27;0f[42m[30mProgress: [ 92%][49m[39m [#####################################################################################........] 8Setting up pciutils (1:3.5.2-1ubuntu1.1) ...
+Setting up ubuntu-minimal (1.417.1) ...
+Setting up ubuntu-standard (1.417.1) ...
+7[27;0f[42m[30mProgress: [ 93%][49m[39m [######################################################################################.......] 8Setting up libpython3.6-stdlib:amd64 (3.6.8-1~18.04.1) ...
+Setting up plymouth-theme-ubuntu-text (0.9.3-1ubuntu7.18.04.2) ...
+7[27;0f[42m[30mProgress: [ 94%][49m[39m [#######################################################################################......] 8update-initramfs: deferring update (trigger activated)
+Setting up grub-pc (2.02-2ubuntu8.13) ...
+Installing for i386-pc platform.
+Installation finished. No error reported.
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/50-cloudimg-settings.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.15.0-1043-aws
+Found initrd image: /boot/initrd.img-4.15.0-1043-aws
+Found linux image: /boot/vmlinuz-4.15.0-1032-aws
+Found initrd image: /boot/initrd.img-4.15.0-1032-aws
+done
+Setting up open-vm-tools (2:10.3.10-1~ubuntu0.18.04.1) ...
+7[27;0f[42m[30mProgress: [ 95%][49m[39m [########################################################################################.....] 8Setting up python3.6-minimal (3.6.8-1~18.04.1) ...
+Setting up libpython3.6:amd64 (3.6.8-1~18.04.1) ...
+7[27;0f[42m[30mProgress: [ 96%][49m[39m [#########################################################################################....] 8Setting up python3.6 (3.6.8-1~18.04.1) ...
+Setting up python3-update-manager (1:18.04.11.10) ...
+Setting up python3-distupgrade (1:18.04.34) ...
+7[27;0f[42m[30mProgress: [ 97%][49m[39m [##########################################################################################...] 8Setting up ubuntu-release-upgrader-core (1:18.04.34) ...
+Setting up update-manager-core (1:18.04.11.10) ...
+7[27;0f[42m[30mProgress: [ 98%][49m[39m [###########################################################################################..] 8Setting up update-notifier-common (3.192.1.7) ...
+Processing triggers for initramfs-tools (0.130ubuntu3.8) ...
+7[27;0f[42m[30mProgress: [ 99%][49m[39m [############################################################################################.] 8update-initramfs: Generating /boot/initrd.img-4.15.0-1043-aws
+Setting up ubuntu-server (1.417.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+
+7[0;27r8[1A[J]0;ubuntu@ip-10-0-3-247: ~[01;32mubuntu@ip-10-0-3-247[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2019-07-04 20:50:59+0000

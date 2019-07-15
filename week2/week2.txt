@@ -1,0 +1,45 @@
+This script answers questions 1 through 5 of Assignment 1 for CIS399 System Administration
+
+1. EC2 Instance IDs & Private IP Addresses:
+   Instance: AquaBee-K
+    - Instance ID: 0d1fdc119e0cd5bbe
+    - Private IP Address: 10.0.3.212
+
+   Instance: AquaBee-R
+    - Instance ID: 0780915ddcccfc657
+    - Private IP Address: 10.0.3.247
+
+2. How to find the public IP address of a given instance using the EC2 console: 
+    - In the EC2 console, select 'Instances' located in the navigation menu.
+    - Select your instance. 
+    - With 'Description' selected in the details pane, the public IP address is 
+      accessible from the IPv4 Pubilc IP field.
+
+3. Output of a command showing how much disk space one of our instances has:
+    - Command: df -h
+    - Output:
+      Filesystem      Size  Used Avail Use% Mounted on
+      udev            229M     0  229M   0% /dev
+      tmpfs            48M  760K   48M   2% /run
+      /dev/xvda1      7.7G  1.6G  6.1G  21% /
+      tmpfs           240M     0  240M   0% /dev/shm
+      tmpfs           5.0M     0  5.0M   0% /run/lock
+      tmpfs           240M     0  240M   0% /sys/fs/cgroup
+      /dev/loop0       91M   91M     0 100% /snap/core/6350
+      /dev/loop1       18M   18M     0 100% /snap/amazon-ssm-agent/930
+      /dev/loop2       89M   89M     0 100% /snap/core/7270
+      /dev/loop3       18M   18M     0 100% /snap/amazon-ssm-agent/1335
+      tmpfs            48M     0   48M   0% /run/user/1000 
+
+4. Output of a command showing how much memory one of our instances has:
+   - Command: free -m
+   - Output:
+                   total        used        free      shared  buff/cache   available
+     Mem:            479         109          51           0         319         357
+     Swap:             0           0           0 
+
+5. All the processes running in one of our instances: 
+    - Command: ps -a
+    - Output:
+      PID TTY          TIME CMD
+      17572 pts/1    00:00:00 ps

@@ -1,0 +1,91 @@
+This termial excerpt answers questions 3 and 4 of Assignment 2 for CIS399 System Administration
+
+
+3. Removing the sshd_config file, listing the directory to ensure it is removed, calling puppet apply, and then listing the directory again to ensure it has been reinstated
+
+ubuntu@ip-10-0-3-247:~$ script
+Script started, file is typescript
+ubuntu@ip-10-0-3-247:~$ ls /etc/ssh/
+moduli                ssh_host_ecdsa_key.pub    ssh_host_rsa_key.pub
+ssh_host_dsa_key      ssh_host_ed25519_key      ssh_import_id
+ssh_host_dsa_key.pub  ssh_host_ed25519_key.pub  sshd_config
+ssh_host_ecdsa_key    ssh_host_rsa_key
+ubuntu@ip-10-0-3-247:~$ sudo rm /etc/ssh/sshd_config 
+ubuntu@ip-10-0-3-247:~$ ls /etc/ssh/
+moduli                ssh_host_ecdsa_key.pub    ssh_host_rsa_key.pub
+ssh_host_dsa_key      ssh_host_ed25519_key      ssh_import_id
+ssh_host_dsa_key.pub  ssh_host_ed25519_key.pub
+ssh_host_ecdsa_key    ssh_host_rsa_key
+ubuntu@ip-10-0-3-247:~$ sudo puppet apply /etc/puppet/manifests/site.pp 
+Notice: Compiled catalog for ip-10-0-3-247.us-west-2.compute.internal in environment production in 0.41 seconds
+Notice: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]/ensure: defined content as '{md5}c371494ad194411b4641b2e5f998a681'
+Notice: /Stage[main]/Sshd/Service[ssh]: Triggered 'refresh' from 1 event
+Notice: Applied catalog in 0.16 seconds
+ubuntu@ip-10-0-3-247:~$ ls /etc/ssh/
+moduli                ssh_host_ecdsa_key.pub    ssh_host_rsa_key.pub
+ssh_host_dsa_key      ssh_host_ed25519_key      ssh_import_id
+ssh_host_dsa_key.pub  ssh_host_ed25519_key.pub  sshd_config
+ssh_host_ecdsa_key    ssh_host_rsa_key
+
+
+
+
+4. Removing the .ssh authorized keys file, listing the directory to ensure it is removed, calling puppet apply, and then listing the directory again to ensure it has been reinstated
+
+ubuntu@ip-10-0-3-247:~$ ls .ssh
+authorized_keys
+ubuntu@ip-10-0-3-247:~$ sudo rm .ssh/authorized_keys 
+ubuntu@ip-10-0-3-247:~$ ls .ssh
+ubuntu@ip-10-0-3-247:~$ sudo puppet apply /etc/puppet/manifests/site.pp 
+Notice: Compiled catalog for ip-10-0-3-247.us-west-2.compute.internal in environment production in 0.40 seconds
+Notice: /Stage[main]/Sshd/Ssh_authorized_key[discretelando_rsa]/ensure: created
+Notice: /Stage[main]/Sshd/Ssh_authorized_key[kylieq_rsa]/ensure: created
+Notice: Applied catalog in 0.08 seconds
+ubuntu@ip-10-0-3-247:~$ ls .ssh
+authorized_keys
+ubuntu@ip-10-0-3-247:~$ exit
+exit
+Script done, file is typescript
+ubuntu@ip-10-0-3-247:~$ logout
+
+
+
+4+.
+##Making sure that authorization to the instance has not been corrupted##
+
+ubuntu@ip-10-0-3-247:~$ logout
+Connection to ec2-52-36-36-14.us-west-2.compute.amazonaws.com closed.
+lando@TheExecutioner:~$ ssh ubuntu@ec2-52-36-36-14.us-west-2.compute.amazonaws.com
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-1043-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Jul 15 20:14:34 UTC 2019
+
+  System load:  0.06              Processes:           91
+  Usage of /:   21.9% of 7.69GB   Users logged in:     1
+  Memory usage: 36%               IP address for eth0: 10.0.3.247
+  Swap usage:   0%
+
+ * MicroK8s 1.15 is out! Thanks to all 40 contributors, you get the latest
+   greatest upstream Kubernetes in a single package.
+
+     https://github.com/ubuntu/microk8s
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+Last login: Mon Jul 15 20:12:18 2019 from 128.223.222.50
+
+
