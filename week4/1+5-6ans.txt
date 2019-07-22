@@ -1,0 +1,76 @@
+This termial excerpt answers questions 1 and 5-6 of Assignment 3 for CIS399 System Administration
+
+1. The following urls lead to the same web content. But serviced by two different instances
+
+		AquaBee-R:
+		http://52.36.36.14/aquabee.html
+
+		AquaBee-K:
+		http://34.214.77.51/aquabee.html
+
+
+5. We already received countless hits from unknown users requesting random PHP files like you mentioned in class. But here are our actual requests, grabbing aquabee.html 
+from our web servers as well as some log data displaying AWS Load Balancer Health Checks
+
+AquaBee-R:
+***********************************************************************************************
+10.0.3.37 - - [21/Jul/2019:16:06:19 +0000] "-" 408 0 "-" "-"
+10.0.3.37 - - [21/Jul/2019:16:06:21 +0000] "GET / HTTP/1.1" 200 474 "-" "ELB-HealthChecker/1.0"
+10.0.3.35 - - [21/Jul/2019:16:06:40 +0000] "GET / HTTP/1.1" 200 474 "-" "ELB-HealthChecker/1.0"
+10.0.3.37 - - [21/Jul/2019:16:06:51 +0000] "GET / HTTP/1.1" 200 779 "-" "ELB-HealthChecker/1.0"
+10.0.3.35 - - [21/Jul/2019:16:07:00 +0000] "-" 408 0 "-" "-"
+73.240.63.166 - - [21/Jul/2019:16:07:02 +0000] "GET /aquabee.html HTTP/1.1" 404 504 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0"
+73.240.63.166 - - [21/Jul/2019:16:07:02 +0000] "GET /favicon.ico HTTP/1.1" 404 502 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0"
+10.0.3.35 - - [21/Jul/2019:16:07:10 +0000] "GET / HTTP/1.1" 200 779 "-" "ELB-HealthChecker/1.0"
+10.0.3.37 - - [21/Jul/2019:16:07:11 +0000] "-" 408 0 "-" "-"
+10.0.3.37 - - [21/Jul/2019:16:07:21 +0000] "GET / HTTP/1.1" 200 779 "-" "ELB-HealthChecker/1.0"
+10.0.3.35 - - [21/Jul/2019:16:07:40 +0000] "GET / HTTP/1.1" 200 474 "-" "ELB-HealthChecker/1.0"
+73.240.63.166 - - [21/Jul/2019:16:07:50 +0000] "GET /aquabee.html HTTP/1.1" 200 490 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0"
+10.0.3.35 - - [21/Jul/2019:16:07:51 +0000] "-" 408 0 "-" "-"
+***********************************************************************************************
+
+AquaBee-K:
+***********************************************************************************************
+73.240.63.166 - - [22/Jul/2019:03:14:25 +0000] "GET /aquabee.html HTTP/1.1" 200 489 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0"
+73.240.63.166 - - [22/Jul/2019:03:14:28 +0000] "GET /aquabee.html HTTP/1.1" 200 489 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0"
+73.240.63.166 - - [22/Jul/2019:03:14:28 +0000] "GET /aquabee.html HTTP/1.1" 200 489 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0"
+73.96.104.149 - - [22/Jul/2019:03:14:28 +0000] "GET /aquabee.html HTTP/1.1" 200 490 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.1 Safari/605.1.15"
+73.96.104.149 - - [22/Jul/2019:03:14:28 +0000] "GET /favicon.ico HTTP/1.1" 404 504 "http://34.214.77.51/aquabee.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.1 Safari/605.1.15"
+10.0.3.35 - - [22/Jul/2019:03:14:40 +0000] "GET / HTTP/1.1" 200 11229 "-" "ELB-HealthChecker/1.0"
+10.0.3.35 - - [22/Jul/2019:03:14:40 +0000] "-" 408 0 "-" "-"
+10.0.3.37 - - [22/Jul/2019:03:14:51 +0000] "GET / HTTP/1.1" 200 11229 "-" "ELB-HealthChecker/1.0"
+10.0.3.37 - - [22/Jul/2019:03:14:56 +0000] "-" 408 0 "-" "-"
+10.0.3.37 - - [22/Jul/2019:03:14:56 +0000] "-" 408 0 "-" "-"
+10.0.3.37 - - [22/Jul/2019:03:15:01 +0000] "-" 408 0 "-" "-"
+10.0.3.37 - - [22/Jul/2019:03:15:01 +0000] "-" 408 0 "-" "-"
+10.0.3.35 - - [22/Jul/2019:03:15:10 +0000] "GET / HTTP/1.1" 200 11229 "-" "ELB-HealthChecker/1.0"
+10.0.3.37 - - [22/Jul/2019:03:15:21 +0000] "GET / HTTP/1.1" 200 11229 "-" "ELB-HealthChecker/1.0"
+10.0.3.35 - - [22/Jul/2019:03:15:31 +0000] "-" 408 0 "-" "-"
+10.0.3.35 - - [22/Jul/2019:03:15:40 +0000] "GET / HTTP/1.1" 200 11229 "-" "ELB-HealthChecker/1.0"
+
+***********************************************************************************************
+
+6. We created a directory called html inside of our apache2 module under the files subdirectory. This is the only way we found it possible to run and be acknowledged by apache.
+We also added a reference to the /var/www/html directory in the init.pp file in the apache2 module. This code ensures that the html directory is there and that it matches the same
+content found in our puppet html directory. This ensures both instances have access to the same web content.
+
+local path and directory contents:
+***********************************************************************************************
+: ~/Documents/CS399/AquaBee-puppet/code/modules/apache2/files$ ls
+apache2.conf  html
+***********************************************************************************************
+
+puppet code found in /apache2/manifests/init.pp
+***********************************************************************************************
+file { "/var/www/html":
+        ensure  => directory,
+        recurse => true,
+        mode    => '444',
+        owner   => 'root',
+        group   => 'root',
+        source  => "puppet:///modules/apache2/html",
+        require => Package["apache2"],
+}
+***********************************************************************************************
+
+
