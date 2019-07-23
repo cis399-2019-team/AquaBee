@@ -18,4 +18,4 @@ This termial excerpt answers questions 2 through 4 of Assignment 3 for CIS399 Sy
        - With one service inactive, the load balancer still provides pages.
 
    Results of testing our load balancer when both are shut down:
-       - With both services inactive, the load balancer hangs for a second before providing pages.      
+       - With both services inactive, the pages are longer being served via requests. Our previous report stated that it would hang and then provide the pages. After deliberation we believe that happened because our browsers just cached and reloaded the same page. Since we were just clickiing refresh on the current web page. However, once we opened a new browser and attempted to request the web page. There was no response from the server at all. Not until < 5 minutes later when ourt cron jobs ran and turned the services back on.      
