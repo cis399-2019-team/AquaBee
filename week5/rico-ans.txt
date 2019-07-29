@@ -1,0 +1,68 @@
+**This File is a report for Week 5's Assignment**
+Detailing the experience of creating and communicating with different system administrators to create user accounts
+
+1. Reports:
+
+MapMoney-
+I was one of the first people to attempt logging in to MapMoney and I kept running into issues logging in to my account. I was getting prompted for a password
+when ssh authentication should have sufficed. I communicated my issues to the system admin and she worked on the issue and now I have no issues logging in or 
+performing any tasks.
+
+Team-9-
+I've had no issue logging in to this group's instance. Communication through our forum has created a very seamless approach to creating and logging into instances.
+Job well done.
+
+Team Garbage Bin-
+This group could have made it slightly easier for users by giving the name of their instances, since they aren't names after the group. In particular Lucas'
+instance is not "lucas" so that made logging in a bit more challenging. However once I found that out, everything went swimmingly and I was able to log in successfully.
+
+Team Rocket-
+No issues for this group. Logged in and can execute basic tasks.
+
+defaultName-
+I'm getting a permission denied response when logging in. I reached out to the system admins on this issue. I'm assuming it's just because someone mistakenly copied
+over the wrong or a somehow incorrect version of my public key.
+
+Team 1-
+Getting the same issue as above. I will check the statuses of both these instances about 30 minutes before class time in order to make sure they get ample amounts of time
+to resolve the issue.
+
+2.
+
+Aquabee-R Instance Login Logs (using sudo lslogins)
+
+**********************************************************************
+ubuntu@ip-10-0-3-247:~$ sudo lslogins -u
+ UID USER   PROC PWD-LOCK PWD-DENY  LAST-LOGIN GECOS
+   0 root     78        0        1             root
+1000 ubuntu    4        0        1       19:34 Ubuntu
+1001 stevev    0        0        1             
+1002 james     0        0        1       02:01 
+1003 owen      0        0        1 Jul25/22:32 
+1004 austin    0        0        1       02:05 
+1005 henzi     0        0        1 Jul28/21:58 
+1006 keir      0        0        1       05:57 
+1007 mapu      0        0        1 Jul25/19:43 
+1008 jerry     0        0        1 Jul26/22:42 
+1009 devin     0        0        1 Jul28/23:17 
+1010 lucas     0        0        1 Jul28/23:24 
+**********************************************************************
+
+Aquabee-K Instance Login Logs
+**********************************************************************
+ UID USER   PROC PWD-LOCK PWD-DENY  LAST-LOGIN GECOS
+   0 root     77        0        1             root
+1000 ubuntu    4        0        1       19:46 Ubuntu
+1001 stevev    0        0        1             
+1002 james     0        0        1             
+1003 owen      0        0        1             
+1004 austin    0        0        1             
+1005 henzi     0        0        1             
+1006 keir      0        0        1             
+1007 mapu      0        0        1 Jul27/01:10 
+1008 jerry     0        0        1             
+1009 devin     0        0        1             
+1010 lucas     0        0        1             
+**********************************************************************
+
+In total we have nine users that have successfully been able to login to their accounts. The final one remaining is user stevev. 
