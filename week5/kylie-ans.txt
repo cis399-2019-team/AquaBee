@@ -1,0 +1,6 @@
+Kylie's summary report
+
+Successful: Aquabee, MapMoney, Team Rocket
+Unsuccesful: Team-9, Team Garbage Bin, defaultName, Team1
+
+I was successfully able to log into nearly half of the accounts. For the remaining that I could not log into, there were problems with my public key. They may not have copied it over correctly. I noted that on the shared google doc in hopes that they may try to fix it. 
