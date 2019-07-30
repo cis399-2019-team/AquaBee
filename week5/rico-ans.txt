@@ -66,3 +66,7 @@ Aquabee-K Instance Login Logs
 **********************************************************************
 
 In total we have nine users that have successfully been able to login to their accounts. The final one remaining is user stevev. 
+
+***UPDATE 07/30/19***
+added new user "manhim" per instructions from the professor. Still have not heard from the user to verify whether they have attempted to login
+or if they will try. But everything should be working in case they would like to.
