@@ -68,5 +68,19 @@ Aquabee-K Instance Login Logs
 In total we have nine users that have successfully been able to login to their accounts. The final one remaining is user stevev. 
 
 ***UPDATE 07/30/19***
-added new user "manhim" per instructions from the professor. Still have not heard from the user to verify whether they have attempted to login
-or if they will try. But everything should be working in case they would like to.
+added new user "manhim"
+ubuntu@ip-10-0-3-247:~$ sudo lslogins -u
+ UID USER   PROC PWD-LOCK PWD-DENY  LAST-LOGIN GECOS
+   0 root     80        0        1             root
+1000 ubuntu    8        0        1       19:51 Ubuntu
+1001 stevev    0        0        1             
+1002 james     0        0        1 Jul29/02:01 
+1003 owen      0        0        1 Jul25/22:32 
+1004 austin    0        0        1 Jul29/02:05 
+1005 henzi     0        0        1 Jul28/21:58 
+1006 keir      0        0        1 Jul29/05:57 
+1007 mapu      0        0        1 Jul25/19:43 
+1008 jerry     0        0        1 Jul26/22:42 
+1009 devin     0        0        1 Jul28/23:17 
+1010 lucas     0        0        1 Jul28/23:24 
+1011 manhim    0        0        1       19:30 
