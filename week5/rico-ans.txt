@@ -21,11 +21,11 @@ No issues for this group. Logged in and can execute basic tasks.
 
 defaultName-
 I'm getting a permission denied response when logging in. I reached out to the system admins on this issue. I'm assuming it's just because someone mistakenly copied
-over the wrong or a somehow incorrect version of my public key.
+over the wrong or a somehow incorrect version of my public key. (UPDATE: Successfully logged in as of 07/30/19)
 
 Team 1-
 Getting the same issue as above. I will check the statuses of both these instances about 30 minutes before class time in order to make sure they get ample amounts of time
-to resolve the issue.
+to resolve the issue. (UPDATE: Successfully logged in as of 07/30/19)
 
 2.
 
