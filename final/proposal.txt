@@ -1,0 +1,30 @@
+Project Idea: User Virtual ENvironment
+----------------------------------------------
+
+
+***sudo cp /home/USER1/FNAME /home/USER2/FNAME && sudo chown USER2:USER2 /home/USER2/FNAME***
+
+General Description: Use chroon job logic like this to implement a virtual environment system in which everyone has their own specific user folder. Hosted on their account. Where they can make changes to code and projects. Then be able to run that code in the virtual environment. Which will be its on separate user that everyone has execute only access to. So no one can delete or modify someone else's code. 
+
+Goals: The main goal for the project is to implement a virtual environment user account in which all users on the instance can run their individual code in an environment that will have all dependencies installed so individual users don't need to install it on their own user accounts. The main goal for this would be to more effectively use puppet and user to sysadmin communication to create a good cohesive system.
+	-Sub Goal: implement a cron job to copy over a user folder to the virtual environment folder
+	-Sub Goal: for security purposes ensure that users cannot modify others code, executable and readable by virtualenv user but not write
+	-Sub Goal: We will test to make sure that people can login and run their code on the virtualenv
+	-Sub Goal: Create puppet logic to ensure this flow is consistent
+
+User Support:
+	- We will have an email set up in user documentation that allows people to email us if there are any dependencies the user wants installed on the virtualenv that they cannot download on their own
+	- The user experience will be pretty straightforward, they add code in their personal folder that we will create and every 30 seconds or so a cron job will copy all contents over to the virtualenv
+
+Security:
+	- We will use all user accounts' ssh keys to allow they to authenticate into the user virtualenv, so not just anyone can ssh into the machine
+	- The only foreseeable security issue that have not already been addressed is the user adds or removes dependencies, but this should be easily fixable
+
+Implementation:
+	- We will use puppet and chron jobs to implement all the proposed steps 
+	- To maintain the the environment we will be keeping an eye on emails for current users as well as new users
+	- Current users shouldn't really need any additional communication with the sysadmins except for possible adding of libraries or downloads of new packages
+
+Documentation:
+	- We will create user documentation that will be visible and accessible in both the virtual envirionment user account as well as on the Aquabee Github
+	- We will create system admin documentation that will be visible and accessible on the Aquabee Github for future system administrators that may pick up this project or add on to it
