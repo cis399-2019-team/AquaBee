@@ -1,30 +1,32 @@
-Project Idea: User Virtual ENvironment
-----------------------------------------------
+Project Idea: Murder Mystery Night Distribution (MMN) 
+-------------------------------------------------------
 
+General Description: In a previous class we developed a C++ terminal game that allows users to explore a house where a murder took place. The goal is to figure out who the murderer is before you become the next victim. The main purpose of this project will be to implement an update system that pushes updates to the git version control system. The main goal of this is to create a method of posting updates to the game code that will instantly be accessible by all users. Each user will have their own progress in the campaign saved and edit basic character information. These changes will persist through updates, unless serious changes are made. 
 
-***sudo cp /home/USER1/FNAME /home/USER2/FNAME && sudo chown USER2:USER2 /home/USER2/FNAME***
-
-General Description: Use chroon job logic like this to implement a virtual environment system in which everyone has their own specific user folder. Hosted on their account. Where they can make changes to code and projects. Then be able to run that code in the virtual environment. Which will be its on separate user that everyone has execute only access to. So no one can delete or modify someone else's code. 
-
-Goals: The main goal for the project is to implement a virtual environment user account in which all users on the instance can run their individual code in an environment that will have all dependencies installed so individual users don't need to install it on their own user accounts. The main goal for this would be to more effectively use puppet and user to sysadmin communication to create a good cohesive system.
-	-Sub Goal: implement a cron job to copy over a user folder to the virtual environment folder
-	-Sub Goal: for security purposes ensure that users cannot modify others code, executable and readable by virtualenv user but not write
-	-Sub Goal: We will test to make sure that people can login and run their code on the virtualenv
-	-Sub Goal: Create puppet logic to ensure this flow is consistent
+Goals: The main goal for the project is to implement an environment in which the user can have access to MMN and be able to effectively and reliably use this fun passtime. 
+	-Sub Goal: implement a memory system that keeps track of where a user left off
+	-Sub Goal: implement an architecture that allows for updates without erasing personal data
+	-Sub Goal: We will test to make sure that people can login and run their games
+	-Sub Goal: We will test that user data persists and continues after an update to game code
 
 User Support:
-	- We will have an email set up in user documentation that allows people to email us if there are any dependencies the user wants installed on the virtualenv that they cannot download on their own
-	- The user experience will be pretty straightforward, they add code in their personal folder that we will create and every 30 seconds or so a cron job will copy all contents over to the virtualenv
+	- We will have an email set up in user documentation that allows people to email us if there are any requests or features anyone wants to be added to the game
+	- The user experience will be pretty straightforward, they run the program, set up their character and begin playing the game
+	- We will have in game help instructions to help the user get around the game
+	- Current users shouldn't really need any additional communication with sysadmins
 
 Security:
-	- We will use all user accounts' ssh keys to allow they to authenticate into the user virtualenv, so not just anyone can ssh into the machine
-	- The only foreseeable security issue that have not already been addressed is the user adds or removes dependencies, but this should be easily fixable
+	- We will use all user accounts' ssh keys to allow them to authenticate into only their user account
+	- Luckily we don't need to open up user accounts outside of this
+	- We will use a cron job to pull the github repo periodically using git pull which is a secure interation
+	- We will also use Puppet in order to push the game code to all the users so there is no added risk of opening up the accounts or the instance to the world
+	- AWS handles a lot of the security risks by making sure no traffic outside of the security group ever reaches the instance
 
 Implementation:
-	- We will use puppet and chron jobs to implement all the proposed steps 
+	- Puppet and cron jobs will be used to implement all the the periodic updates
 	- To maintain the the environment we will be keeping an eye on emails for current users as well as new users
-	- Current users shouldn't really need any additional communication with the sysadmins except for possible adding of libraries or downloads of new packages
 
 Documentation:
 	- We will create user documentation that will be visible and accessible in both the virtual envirionment user account as well as on the Aquabee Github
 	- We will create system admin documentation that will be visible and accessible on the Aquabee Github for future system administrators that may pick up this project or add on to it
+	- As stated previously, there are also tutorials/help in the game itself. It is meant to be a trial and error game. But there is some help.
