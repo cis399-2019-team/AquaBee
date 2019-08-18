@@ -1,0 +1,75 @@
+Please Use This Documentation As A Reference Sheet For The Created System
+
+Document Contents:
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+1. Overview
+2. Layout
+3. Edit Code
+4. Publish Reviewed Code
+5. Pull Code to All Instances
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+(1) OVERVIEW
+The main goal of this created architecture is establish a system in which code can be produced on one environment and shipped to many users at once. The System Administrator
+portion of this project uses Puppet to maintain the security of the individual user as well as effectively updating all modified/tracked parts of an update. The main concerns were security, preserving data saves, and light overhead for distribution of code. All of these requirements have been fulfilled.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+(2) LAYOUT
+Git is our friend. We managed to reduce the amount of files required to move over via Puppet, completely. In the survive module in the /etc/puppet/manifests/init.pp file you will see the workhorse that is our init file. Essentially all the heavy lifting gets done here. If you want to add users to the software deployment cycle, this is where you come. If you want to change which repository Puppet clones and fetches for updates, this file is also where you need to go. 
+
+The code snippet below is an excerpt from the init file. What it does is creates a cron job called survive pull. Once created it will change directories to the user's home directory and enter the survivethenight subdirectory. This is the directory being managed by Puppet, which will be highlighted shortly. It then does a git fetch -all, which updates this branch's head to match the head of the origin, essentially copying all new files. The next command git reset is applying all the changes to effectively match the origin/master branch. We went with this route because we kept receiving errors about unmatching files. This method is perfect because all unaffiliated files will remain untouched. It's imperative that each user gets their own cron job. Please look at the full document for further example.
+
+********************************************************************
+	cron { "survive pull":
+		command => "cd /home/ubuntu/survivethenight && sudo git fetch --all && sudo git reset --hard origin/master",
+		user    => root,
+		minute  => "*/1",
+	}
+********************************************************************
+
+The code snippet below is an excerpt from the init file and highlights how to ensure a package for the software you will be deploying requires, is necessarily installed on your instance/virtual machine.
+********************************************************************
+	package { "g++":
+		ensure => installed;
+	}
+
+	package { "make":
+		ensure => installed;
+	}
+********************************************************************
+
+The code snippet below is an excerpt from the init file. This is where the actual folder is created and connected to the git repo. If you want to change the repo that the actual folder is binded to, you must go to this section of the file and edit the source entry. It is imperative that each individual user has their own code snippet of htis variant.
+********************************************************************
+	vcsrepo { "/home/ubuntu/survivethenight":
+		ensure  => present,
+		provider => git,
+		source  => "https://bitbucket.org/discretelando/survivethenight",
+	}
+********************************************************************
+
+The code snippet below is the final piece and possibly the most important piece to the init file. It ensures that all of the newly created survivethenight directories are only writeable from the owner of the file.  Which we also set to each individual user. If you would like to edit file permissions, you simply need to locate this section and modify to whichever settings you like and deem safe/suitable.
+********************************************************************
+   file { '/home/ubuntu/survivethenight':
+    ensure => 'directory',
+    owner  => 'ubuntu',
+    mode   => '0755',
+    recurse => true,
+  }
+ ********************************************************************
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+(3) Edit Code
+From the SysAdmin Point of view, all of the changes to the code to manipulate user access and repo/dependencies can be accessed in the AquaBee-Puppet git repo. 
+Make sure to make all changes here or else the Puppet repo on the instances will be out of sync and cause multiple errors.
+
+From the Developers point of view, all code base changes can be made at the SurviveTheNight git repo. Only Kylie and I have access to it, so feel free to email us for information
+or suggestions for information on patch releases for the game. Aside from that you can write code in any repo that you like, so long as an accompanying init file is created in puppet.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+(4) + (5) Publish Reviewed Code/Pull Code to All Instances
+The point of this project was to easily deploy changes to all users simultaneously. That is exactly what we've accomplished. If you follow the steps above and or are just making changes to the SurviveTheNight repo. Then you don't have to do any additional work. The cron job and puppet code ensures that all software is up to date for all users (as of date).
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
