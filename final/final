@@ -2,3 +2,94 @@ Title: Survive the Night Meets Puppet
 Authors: Kylie Quan, Ricardo Williams
 Last Modified: 08/17/2019
 
+OVERVIEW
+-------------------------------------
+Git is our friend. We managed to reduce the amount of files required to move over via Puppet, completely. In the survive module in the /etc/puppet folder, we added logic to pull required files from a git repository itself. This was an amazing discovery because we had originally intended to have a nested repo inside of our puppet repository, which would serve as the code base for each instance. Then copy over all the files to a more accessible location for the user. This turned out to be quite a headache in the development of this architecture. After a couple of hours of restrategizing and some help from Google, we finally landed upon our current implementation. There were also a few hours spend modifying the code base for the game, in order to support a very basic save mechanism to test the full effectiveness of the system. All tests came back conclusive that the puppet and git implementations were a success. All save files remain after pushing new code to the repository.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+GOALS:
+-----------------------------------------------------------------------------------------------------------------------------
+
+Intial Goals-
+The main goal for the project is to implement an environment in which the user can have access to MMN (survive the night game) and be able to effectively and reliably use this fun passtime.
+        -Sub Goal 1: implement a memory system that keeps track of where a user left off
+        -Sub Goal 2: implement an architecture that allows for updates without erasing personal data
+        -Sub Goal 3: We will test to make sure that people can login and run their games
+        -Sub Goal 4: We will test that user data persists and continues after an update to game code
+
+How'd We Do-
+
+        - Main Goal (REACHED): We effectively created a ditribution system in which all users have access to the terminal game, as well as all furture updates without having to do a single thing. This was tested by logging in to the ubuntu user account, and playing the game at different times, and after different updates. It took some time to get everything working properly. But once it was, the updates got pulled to the user within a minute.
+
+        - Sub Goal 1 (REACHED): If you have time to actually play the game, we implemented a new architecture to the gameplay to allow each user to create and save a custom character name as well as save their progress for intelligence/knowledge. Previously the game gave you a generic identity and you play from start to finish in one sitting. Now you have the option to quit and return whenever you like.
+
+        - Sub Goal 2 (REACHED): As mentioned previously, we found and implemented a way to remotely download all updates without modifying or removing any additional user created content within the directory.
+
+        - Sub Goal 3 (REACHED): We used test accounts to create executable files and run the game. Which all went swimmingly.
+
+        - Sub Goal 4 (REACHED): To test this one was a bit more tricky. But essentially we played the game using sudo on a few accounts and then pushed updates to the system. Once the updates were pulled onto the instances, the files were observed to still be intact. The files I'm referring to are the "gamesave" files that are created after a user creates a character for the first time.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+USER SUPPORT:
+ -----------------------------------------------------------------------------------------------------------------------------
+
+User Support:
+        - We will have an email set up in user documentation that allows people to email us if there are any requests or features anyone wants to be added to the game
+        - The user experience will be pretty straightforward, they run the program, set up their character and begin playing the game
+        - We will have in game help instructions to help the user get around the game
+        - Current users shouldn't really need any additional communication with sysadmins
+
+How'd We Do-
+        - We have created in game instructions that the users can use to effectively play the game while still leaving some of the mystery hidden.
+        - The user can email either Kylie or Ricardo (Rico) if any further instructions are needed, there is also a README.md that illustrates additonal information.
+        - We met all of our initial goals for the User Support aspect of the project
+-----------------------------------------------------------------------------------------------------------------------------
+
+SECURITY
+-----------------------------------------------------------------------------------------------------------------------------
+Security:
+        - We will use all user accounts' ssh keys to allow them to authenticate into only their user account
+        - Luckily we don't need to open up user accounts outside of this
+        - We will use a cron job to pull the github repo periodically using git pull which is a secure interation
+        - We will also use Puppet in order to push the game code to all the users so there is no added risk of opening up the accounts or the instance to the world
+        -We changed the file permissions on all users' newly created survivethenight directories to be only writeable by the owner. This is a crutial step to ensure the privacy and security of the users. They can view each others files but can not manipulate or delete them in any way.
+        - AWS handles a lot of the security risks by making sure no traffic outside of the security group ever reaches the instance
+
+How'd We Do-
+        - AMAZINGLY!
+        - Only machines that can authenticate with their unique ssh key to a user account can access the infrastructure let alone the game
+        - the cron job pulls from the repo and only the repo specified. The file that holds the init.pp file is owned by root so no one can edit it unless they are in sudo.
+        - Puppet is yet again our savioe and is how we are pulling the new code from the repo onto the instances
+        - AWS ensures that malicious traffic that may try access bizarre or compromised ports never get to our instances due to our security groups. We have apache open to the world but it's only serving a static html page. Not accepting any other traffic or requests.
+        - We also ensured that only the user can make files inside of the new directory we made. Please review the admin documnetation for more information on that subject.
+-----------------------------------------------------------------------------------------------------------------------------
+
+IMPLEMENTATION
+-----------------------------------------------------------------------------------------------------------------------------
+Implementation:
+        - Puppet and cron jobs will be used to implement all the the periodic updates
+        - To maintain the the environment we will be keeping an eye on emails for current users as well as new users
+
+How'd We Do-
+        - To maintain the environment we will ensure that any new and verified users that want to be added, will be added promptly
+        - Any new dependencies that may be required with an update, will be added to the puppet code to ensure its presence
+        - For further information on implementation, please review the admin documentation.
+-----------------------------------------------------------------------------------------------------------------------------
+
+DOCUMENTATION
+-----------------------------------------------------------------------------------------------------------------------------
+Documentation:
+        - We will create user documentation that will be visible and accessible in both the virtual envirionment user account as well as on the Aquabee Github
+        - We will create system admin documentation that will be visible and accessible on the Aquabee Github for future system administrators that may pick up this project or add on to it
+        - As stated previously, there are also tutorials/help in the game itself. It is meant to be a trial and error game. But there is some help.
+
+How'd We Do-
+        - Well this in a way serves as documentation, no?
+        - Aside from this we also have an "admindoc" documnetation file which essentially covers the implementation of the project and serves as a reference for how to make changes to the puppet code. This file can be located in the final subdirectory inside of our Aquabee git repo.
+        - On top of that there is a README.md in the SurviveTheNight git repo that serves as documentation for the programmer in charge of maintaining the code base for the software.
+        - Inside of the game there are tips and help options to help the user
+-----------------------------------------------------------------------------------------------------------------------------
